@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+  @apply mb-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold mb-1;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+.Text-Limit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.select {
+  transition: all 0.5s ease-in-out;
+  border: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* 滚动条有滑块的轨道部分 */
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* 滚动条滑块(竖向:vertical 横向:horizontal) */
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #6c12f4;
+  border-radius: 5px;
+}
+
+/* 滚动条滑块hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6e6c6c;
+}
+
+/* 同时有垂直和水平滚动条时交汇的部分 */
+::-webkit-scrollbar-corner {
+  display: block;
+  /* 修复交汇时出现的白块 */
+}
+
+.PostView {
+  margin-top: 20rem;
+}
