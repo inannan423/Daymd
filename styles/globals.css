@@ -114,11 +114,27 @@ body {
   height: 60rem;
   background: linear-gradient(90deg, rgba(150, 255, 244, 0.813) 0%, rgba(0, 71, 252, 0.806) 100%);
   border-radius: 50%;
-  opacity: 0.3;
-  position: absolute;
-  animation: heartbeat 3s infinite;
-  filter: blur(50px);
+  opacity: 0.2;
+  position: fixed;
+  filter: blur(120px);
   z-index: -1;
+}
+
+.leftmax {
+  left: 20rem
+}
+
+.rightmax {
+  right: 20rem
+}
+
+.csize {
+  height: 70%;
+  width: 70%;
+}
+
+.largetext {
+  font-size: 2rem;
 }
 
 .startbtn {}
@@ -130,7 +146,7 @@ body {
   outline: none;
   border: 2px solid #303030;
   background: #aeaeae15;
-  color: #ae00ff;
+  color: #520eff;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 15px;
@@ -142,7 +158,7 @@ body {
 }
 
 .startbtn:hover {
-  box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+  box-shadow: 0 0 10px #5117ff, 0 0 25px #5b6eff, 0 0 50px #4588fb;
   transition-delay: 0.6s;
 }
 
