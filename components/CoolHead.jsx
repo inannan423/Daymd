@@ -1,106 +1,60 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import { themeChange } from "theme-change";
+import configs from "../daymd.config";
+import { Feter } from "./Feter";
+const PageData = {
+  headTitle: "Get it all done",
+  headTitle1: "with detailed APIs",
+  headTitleChinese: "您只需要负责填空，请把剩下的全部交给我",
+};
 
-function Toggle() {
-  useEffect(() => {
-    themeChange(false);
-    // 👆 false parameter is required for react project
-  }, []);
-  return (
-    <select data-choose-theme class="select  h-5 w-17 ">
-      <option value="forest">Forest</option>
-      <option value="dark">Dark</option>
-      <option value="light">Light</option>
-      <option value="forest">Forest</option>
-      <option value="night">Night</option>
-      <option value="valentine">Valentine</option>
-    </select>
-  );
+function Zhanwei() {
+  return <div className="w-screen h-52"></div>;
 }
 
-function Nav() {
+function Title() {
   return (
-    <div class="navbar fixed bg-base-100">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <label tabindex="0" class="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h7"
-              />
-            </svg>
-          </label>
-          <ul
-            tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <a>Homepage</a>
-            </li>
-            <li>
-              <a>Portfolio</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="navbar-center">
-        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-      </div>
-
-      <div class="navbar-end">
-        <button class="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
-        <button class="btn btn-ghost btn-circle">
-          <div class="indicator">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              />
-            </svg>
-            <span class="badge badge-xs badge-primary indicator-item"></span>
-          </div>
-        </button>
-      </div>
+    <div className="w-screen h-10 flex justify-center items-center">
+      <span className="w-30 colorful  text-center font-black text-7xl">
+        {PageData.headTitle} <br />
+        {PageData.headTitle1} <br />
+        <p className="text-3xl">{PageData.headTitleChinese}</p>
+      </span>
+      <div className="circle1"></div>
+      <div className="circle2"></div>
     </div>
   );
 }
 
-export function NavBar() {
-  return <Nav />;
+function BigMax() {
+  return (
+    <div className="bigMax mt-36">
+      <img src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/ProductWe1253.png" />
+    </div>
+  );
+}
+
+function StartButton() {
+  return (
+    <div className="w-screen h-10 flex justify-center items-center">
+      <button className="startbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> Get Start
+      </button>
+    </div>
+  );
+}
+
+export function CoolHead() {
+  return (
+    <div>
+      <Zhanwei />
+      <Title />
+      <BigMax />
+      <Feter />
+      <StartButton />
+    </div>
+  );
 }

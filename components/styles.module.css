@@ -1,0 +1,18 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  z-index: 10000 !important;
+}
+
+
+
+.featureSvg {
+  height: 400px;
+  width: 400px;
+}
+
+/* .featureSvg :hover {
+  margin-bottom: 20px;
+} */

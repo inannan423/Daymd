@@ -6,6 +6,7 @@ import { Header } from '../components/Header'
 import { NavBar } from '../components/NavBar'
 import { Footer } from '../components/Footer'
 import { Hero } from '../components/Hero'
+import { CoolHead } from '../components/CoolHead'
 import  configs  from '../daymd.config'
 
 // This default export is required in a new `pages/_app.js` file.
@@ -18,6 +19,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       {/* <Hero /> */}
       <NavBar />
+      <CoolHead/>
       <div>
         <Component {...pageProps} />
       </div>

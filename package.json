@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@flodlc/nebula": "^1.0.56",
     "contentlayer": "latest",
     "daisyui": "^2.24.0",
     "date-fns": "^2.29.1",
