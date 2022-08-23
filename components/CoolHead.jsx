@@ -39,13 +39,13 @@ function BigMax() {
 
 function Coding() {
   return (
-    <div class="2xl:hidden">
+    <div>
       <div className="w-screen mb-20  h-10 flex justify-center items-center">
         <span className="mb-20 mt-16  w-30 text-center font-black largetext">
           核心理念
         </span>
       </div>
-      <div class="md:flex gap-20 mb-20 sm:block flex justify-center items-center overflow-hidden">
+      <div class="md:flex gap-20 mb-20  flex justify-center items-center overflow-hidden">
         <div class="h-max w-max  mockup-code">
           <pre data-prefix="0">
             <code>title: "Daymd.", </code>
