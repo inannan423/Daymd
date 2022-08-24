@@ -1,0 +1,44 @@
+---
+title: Body shakes code
+excerpt: Amazing code to make your body shake.
+---
+
+## Deduplication
+
+### Task 1
+
+According to `locale` and `route` to deduplicate the data and keep the data that `route` is unique but locale not matched.
+
+```json title="Test data"
+[
+  { "route": "", "locale": "en" },
+  { "route": "", "locale": "zh" },
+  { "route": "go", "locale": "en" },
+  { "route": "go", "locale": "zh" },
+  { "route": "rust", "locale": "en" },
+  { "route": "rust", "locale": "zh" },
+  { "route": "test/test-01", "locale": "zh" },
+  { "route": "test/test-02", "locale": "zh" },
+  { "route": "test/test-03", "locale": "en" },
+  { "route": "test/test-04", "locale": "en" }
+]
+```
+
+```ts title="Solution"
+const locale = Locale.EN // or Locale.ZH
+
+// Reduce edition
+const localeDocs = allDocs
+  .sort((a) => (a.locale === locale ? -1 : 1))
+  .reduce((acc, doc) => {
+    const routes = acc.map((d) => d.route)
+    if (!routes.includes(doc.route)) acc.push(doc)
+    return acc
+  }, [] as Doc[])
+
+// Map edition
+const map: { [key: string]: number } = {}
+const localeDocs = allDocs
+  .sort((a) => (a.locale === locale ? -1 : 1))
+  .filter((d) => (map[d.route] ? 0 : (map[d.route] = 1)))
+```

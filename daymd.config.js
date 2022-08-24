@@ -50,8 +50,8 @@ const configs = {
   // 导航栏的选项
   navItems: [
     {
-      name: "About",
-      to: "",
+      name: "Docs",
+      to: "/docs",
     },
     {
       name: "Theme",
@@ -210,8 +210,11 @@ const configs = {
   ],
   // 是否启用回到顶部按钮:1是，0否
   ifBackTop: 1,
-  // 回到顶部按钮内的文字，您可以换成”Top“或者”🌵“等字符
+  // 回到顶部按钮内的文字，您可以换成”Top“或者”🌵“甚至”❤“等字符
   backTopText: "↑",
+  // 笔记页面设置
+  // 笔记页面标题
+  notePageTitle: "Notes",
 };
 
 module.exports = configs;

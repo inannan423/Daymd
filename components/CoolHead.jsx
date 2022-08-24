@@ -104,12 +104,12 @@ function Codebox() {
           在 <code>daymd.config.js</code> 中搞定一切
         </span>
       </div>
-      <div className="flex items-center justify-center">
+      <div className=" flex items-center justify-center">
         <iframe
           className="shadow-lg w-9/12 ml-20 mr-20 mb-20 rounded-xl"
           height="600px"
           src="https://codesandbox.io/s/loving-snowflake-l2gcdv?file=/daymd.config.js"
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
       </div>
     </div>

@@ -1,0 +1,44 @@
+---
+title: 虎躯一震代码
+excerpt: 令人惊艳到虎躯一震的代码。
+---
+
+## 去重
+
+### 案例 1
+
+根据 `locale` 和 `route` 对数据进行去重，并保留 `route` 唯一但 `locale` 不匹配的数据。
+
+```json title="测试数据"
+[
+  { "route": "", "locale": "en" },
+  { "route": "", "locale": "zh" },
+  { "route": "go", "locale": "en" },
+  { "route": "go", "locale": "zh" },
+  { "route": "rust", "locale": "en" },
+  { "route": "rust", "locale": "zh" },
+  { "route": "test/test-01", "locale": "zh" },
+  { "route": "test/test-02", "locale": "zh" },
+  { "route": "test/test-03", "locale": "en" },
+  { "route": "test/test-04", "locale": "en" }
+]
+```
+
+```ts title="解决方案"
+const locale = Locale.EN // 或者 Locale.ZH
+
+// Reduce 版本
+const localeDocs = allDocs
+  .sort((a) => (a.locale === locale ? -1 : 1))
+  .reduce((acc, doc) => {
+    const routes = acc.map((d) => d.route)
+    if (!routes.includes(doc.route)) acc.push(doc)
+    return acc
+  }, [] as Doc[])
+
+// Map 版本
+const map: { [key: string]: number } = {}
+const localeDocs = allDocs
+  .sort((a) => (a.locale === locale ? -1 : 1))
+  .filter((d) => (map[d.route] ? 0 : (map[d.route] = 1)))
+```

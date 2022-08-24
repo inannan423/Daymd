@@ -1,35 +1,36 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 
-// 可以创建多个内容
-const Post = defineDocumentType(() => ({
-  name: 'Post',
-  filePathPattern: `**/*.md`,
-  fields: {
-    title: {
-      type: 'string',
-      description: 'The title of the post',
-      required: true,
-    },
-    date: {
-      type: 'date',
-      description: 'The date of the post',
-      required: true,
-    },
-    description: {
-      type: 'string',
-      description: 'The description of the post',
-      required: false,
-    },
+import PrettyCode from 'rehype-pretty-code'
+
+import { CONTENT_DIR } from './src/configs/constants'
+import DocType from './src/contentlayer/types/doc'
+import PostType from './src/contentlayer/types/post'
+
+import light from './src/themes/brackets-light-pro.json'
+import dark from './src/themes/moonlight-ii.json'
+
+// 代码高亮
+const options = {
+  theme: {
+    light,
+    dark,
   },
-  computedFields: {
-    url: {
-      type: 'string',
-      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
-    },
+  onVisitLine(node) {
+    if (!node.children.length) {
+      node.children = [{ type: 'text', value: ' ' }]
+    }
   },
-}))
+  onVisitHighlightedLine(node) {
+    node.properties.className.push('highlighted')
+  },
+  onVisitHighlightedWord(node) {
+    node.properties.className = ['word']
+  },
+}
+
 
 export default makeSource({
-  contentDirPath: 'posts',
-  documentTypes: [Post],
+  contentDirPath: CONTENT_DIR,
+  documentTypes: [DocType, PostType],
+  mdx: { rehypePlugins: [[PrettyCode, options]] },
 })

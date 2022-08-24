@@ -30,7 +30,7 @@ function Nav() {
           >
             {configs.navItems.map((props, idx) => (
               <li key={idx} {...props}>
-                <a>{props.name}</a>
+                <Link href={props.to}>{props.name}</Link>
               </li>
             ))}
           </ul>
