@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next";
 import { DocHeading } from "../../src/contentlayer/types/doc";
 import { motion } from "framer-motion";
 import { titleToSlug } from "../../utils/title-to-slug";
-
+import configs from "../../daymd.config";
 export const AsideContext = createContext<{ isSandpack: boolean }>({
   isSandpack: false,
 });
@@ -62,7 +62,9 @@ export const HeadingsAside: React.FC<
       animate={visible ? "visible" : "hidden"}
       className={cn("space-y-4 px-6 py-8 max-w-xs w-full")}
     >
-      <h3 className={cn("uppercase font-medium")}>{t("toc")}</h3>
+      <h3 className={cn("uppercase font-medium")}>
+        {configs.rightContentText}
+      </h3>
       <nav className={cn("grow")}>
         <ul className={cn("space-y-1.5")}>
           {headings.length &&

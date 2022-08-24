@@ -15,9 +15,10 @@ export const Sidebar: React.FC<{ tree: TNode[] }> = ({ tree }) => {
     <aside
       className={cn("sticky  max-h-screen  flex  flex-col max-w-xs w-full ")}
     >
-      <div className={cn("flex flex-col pl-6 pr-4 py-4")}>
+      {/* 搜索 */}
+      {/* <div className={cn("flex flex-col pl-6 pr-4 py-4")}>
         <SearchIn />
-      </div>
+      </div> */}
       <div className="grow flex flex-col space-y-4 pl-4 pr-4 py-4 overflow-y-hidden">
         <nav className={cn("relative grow overflow-y-scroll scrollbar")}>
           <Tree tree={tree} level={0} />

@@ -212,9 +212,11 @@ const configs = {
   ifBackTop: 1,
   // 回到顶部按钮内的文字，您可以换成”Top“或者”🌵“甚至”❤“等字符
   backTopText: "↑",
-  // 笔记页面设置
+  // 笔记页面设置 ************************************
   // 笔记页面标题
   notePageTitle: "Notes",
+  // 笔记右侧边粗体文字
+  rightContentText: "Topics",
 };
 
 module.exports = configs;
