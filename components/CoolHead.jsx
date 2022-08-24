@@ -106,10 +106,18 @@ function Codebox() {
       </div>
       <div className=" flex items-center justify-center">
         <iframe
-          className="shadow-lg w-9/12 ml-20 mr-20 mb-20 rounded-xl"
-          height="600px"
-          src="https://codesandbox.io/s/loving-snowflake-l2gcdv?file=/daymd.config.js"
-          frameBorder="0"
+          src="https://codesandbox.io/embed/loving-snowflake-l2gcdv?fontsize=14&hidenavigation=1&module=%2Fdaymd.config.js&previewwindow=tests&theme=dark"
+          style={{
+            width: "100%",
+            height: "500px",
+            border: "0",
+            borderRadius: "4px",
+            overflow: "hidden",
+          }}
+          className="shadow-lg w-9/12 ml-20 mr-20 mb-20 rounded-2xl"
+          title="loving-snowflake-l2gcdv"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
         ></iframe>
       </div>
     </div>

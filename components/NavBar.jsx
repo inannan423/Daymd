@@ -5,7 +5,10 @@ import configs from "../daymd.config";
 
 function Nav() {
   return (
-    <div class="mb-12 backdrop-blur-md bg-opacity-10  z-50 navbar fixed bg-base-100">
+    <div
+      style={{ zIndex: "10000" }}
+      class="backdrop-blur-md bg-opacity-10 w-screen  navbar  bg-base-100"
+    >
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost btn-circle">

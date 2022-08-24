@@ -1,4 +1,5 @@
 import React from "react";
+import { NavBar } from "../../components/NavBar";
 import { useState } from "react";
 import cn from "classnames";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -109,7 +110,7 @@ export default function DocsPage({
     doc.headings.map((h: DocHeading, i: number) => {
       const slug = titleToSlug(h.title);
       const el = document.getElementById(slug);
-      if (el && el.getBoundingClientRect().top < 130) cur = i;
+      if (el && el.getBoundingClientRect().top < 130) cur = i + 20;
     });
 
     setActive(cur);
@@ -117,8 +118,13 @@ export default function DocsPage({
 
   return (
     <div>
-      <div className={cn("h-20")}></div>
-      <div className={cn("grow flex flex-row w-screen overflow-auto")}>
+      {/* <div className={cn("h-32")}></div> */}
+      <NavBar />
+      <div
+        className={cn(
+          " sticky min-h-screen grow flex flex-row w-screen overflow-auto"
+        )}
+      >
         {/* 笔记页面列表 */}
         <Sidebar tree={tree} />
         {/* 文章容器 */}
@@ -131,9 +137,7 @@ export default function DocsPage({
           </header>
           <main
             className={cn(
-              "relative grow px-16 pb-10 max-w-none w-full overflow-y-scroll scrollbar-lg",
-              "prose dark:prose-invert",
-              "prose-headings:font-medium"
+              "relative max-h-screen grow px-10 pb-10 max-w-none w-full overflow-y-scroll scrollbar-lg"
             )}
           >
             <h1

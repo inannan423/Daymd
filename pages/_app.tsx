@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/x-icon" href={configs.favicon} />
       </Head>
       {/* <Hero /> */}
-      <NavBar />
+
       <div
         className="transition duration-500 ease-in-out"
         style={{

@@ -60,11 +60,7 @@ export const HeadingsAside: React.FC<
       variants={variants}
       initial={visible ? "visible" : "hidden"}
       animate={visible ? "visible" : "hidden"}
-      className={cn(
-        visible ? "hidden xl:flex flex-col" : "hidden",
-        "space-y-4 px-6 py-8 max-w-xs w-full",
-        "border-l border-l-gray-100 dark:border-l-gray-800"
-      )}
+      className={cn("space-y-4 px-6 py-8 max-w-xs w-full")}
     >
       <h3 className={cn("uppercase font-medium")}>{t("toc")}</h3>
       <nav className={cn("grow")}>
@@ -110,11 +106,7 @@ export const SandpackAside: React.FC<AsidesProps<{}>> = ({ visible }) => {
       variants={variants}
       initial={visible ? "visible" : "hidden"}
       animate={visible ? "visible" : "hidden"}
-      className={cn(
-        visible ? "hidden xl:flex flex-col" : "hidden",
-        "space-y-4 px-6 py-8 max-w-xl w-full",
-        "border-l border-l-gray-100 dark:border-l-gray-800"
-      )}
+      className={cn("space-y-4 px-6 py-8 max-w-xl w-full")}
     >
       <h3 className={cn("space-x-2 uppercase font-medium")}>
         <i

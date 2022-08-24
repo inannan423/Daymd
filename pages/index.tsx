@@ -4,6 +4,7 @@ import { allPosts, Post } from "contentlayer/generated";
 import { Hero } from "../components/Hero";
 import { CoolHead } from "../components/CoolHead";
 import Parallax from "react-rellax";
+import { NavBar } from "../components/NavBar";
 // import {FloatingActionButton} from 'material-ui';
 // import {Back2Top} from 'react-back2top';
 
@@ -42,7 +43,11 @@ function PostCard(post: Post) {
 
 export default function Home({ posts }: { posts: Post[] }) {
   return (
-    <div className="md:box-content mx-auto py-14">
+    <div className="md:box-content mx-auto">
+      <div className="fixed z-50">
+        <NavBar />
+      </div>
+
       <Hero />
       <CoolHead />
       <div className="flex flex-col items-center mt-20">
