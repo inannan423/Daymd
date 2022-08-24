@@ -45,7 +45,7 @@ function Coding() {
           核心理念
         </span>
       </div>
-      <div class="md:flex gap-20 mb-20  flex justify-center items-center overflow-hidden">
+      <div class=" gap-20 mb-20  flex justify-center items-center overflow-hidden">
         <div class="h-max w-max  mockup-code">
           <pre data-prefix="0">
             <code>title: "Daymd.", </code>

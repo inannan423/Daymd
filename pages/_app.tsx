@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       {/* <Hero /> */}
       <NavBar />
-      <CoolHead/>
+
       <div>
         <Component {...pageProps} />
       </div>
