@@ -15,31 +15,31 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-function PostCard(post: Post) {
-  return (
-    <div className="mb-8 w-3/4 mockup-code bg-primary">
-      <div className="p-5">
-        <h2 className="text-xl">
-          <Link href={post.url}>
-            <a className="	hover:text-base-content text-primary-content transition duration-500 ease-in-out">
-              {post.title}
-            </a>
-          </Link>
-        </h2>
-        <time
-          dateTime={post.date}
-          className="text-secondary-content block text-xs  mb-2"
-        >
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
-        <div
-          className="text-secondary-content italic text-sm Text-Limit"
-          dangerouslySetInnerHTML={{ __html: post.description }}
-        ></div>
-      </div>
-    </div>
-  );
-}
+// function PostCard(post: Post) {
+//   return (
+//     <div className="mb-8 w-3/4 mockup-code bg-primary">
+//       <div className="p-5">
+//         <h2 className="text-xl">
+//           <Link href={post.url}>
+//             <a className="	hover:text-base-content text-primary-content transition duration-500 ease-in-out">
+//               {post.title}
+//             </a>
+//           </Link>
+//         </h2>
+//         <time
+//           dateTime={post.date}
+//           className="text-secondary-content block text-xs  mb-2"
+//         >
+//           {format(parseISO(post.date), "LLLL d, yyyy")}
+//         </time>
+//         <div
+//           className="text-secondary-content italic text-sm Text-Limit"
+//           dangerouslySetInnerHTML={{ __html: post.description }}
+//         ></div>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default function Home({ posts }: { posts: Post[] }) {
   return (
@@ -50,11 +50,11 @@ export default function Home({ posts }: { posts: Post[] }) {
 
       <Hero />
       <CoolHead />
-      <div className="flex flex-col items-center mt-20">
+      {/* <div className="flex flex-col items-center mt-20">
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
