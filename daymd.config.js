@@ -83,9 +83,16 @@ const configs = {
     {
       theme: "night",
     },
+    {
+      theme: "cupcake",
+    },
     // ...可以继续添加，请参考文档中的所有主题列表
   ],
-  // 页脚链接
+  // 是否需要大页脚，1：需要，0：不需要
+  ifFootItems: 1,
+  // 大页脚不存在时，底部小页脚中是否需要切换Theme按钮，建议全页只保留一个主题切换按钮
+  ifFootTheme: 0,
+  // 页脚链接，ifFootItems: 1 才生效
   FooterItems: [
     // 每一列
     {
@@ -201,6 +208,10 @@ const configs = {
       to: "https://juejin.cn/",
     },
   ],
+  // 是否启用回到顶部按钮:1是，0否
+  ifBackTop: 1,
+  // 回到顶部按钮内的文字，您可以换成”Top“或者”🌵“等字符
+  backTopText: "↑",
 };
 
 module.exports = configs;

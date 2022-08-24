@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { useEffect } from "react";
+import Parallax from "react-rellax";
 import configs from "../daymd.config";
 import { Feter } from "./Feter";
 const PageData = {
   headTitle: "Get it all done",
   headTitle1: "with detailed APIs",
-  headTitleChinese: "您只需要负责填空，请把剩下的全部交给我",
+  headTitleChinese: "您只需负责填空，剩下的全交给我",
 };
 
 function Zhanwei() {
@@ -31,7 +32,7 @@ function Title() {
 
 function BigMax() {
   return (
-    <div className="bigMax h-auto mt-36 mb-28">
+    <div className="bigMax h-auto z-50 mt-28 mb-48">
       <img src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/ProductWe1253.png" />
     </div>
   );
@@ -45,7 +46,7 @@ function Coding() {
           核心理念
         </span>
       </div>
-      <div class=" gap-20 mb-20  flex justify-center items-center overflow-hidden">
+      <div class="m-5 gap-20 mb-20  flex flex-wrap justify-center items-center overflow-hidden">
         <div class="h-max w-max  mockup-code">
           <pre data-prefix="0">
             <code>title: "Daymd.", </code>
@@ -95,14 +96,40 @@ function StartButton() {
   );
 }
 
+function Codebox() {
+  return (
+    <div>
+      <div className="w-screen mb-20  h-10 flex justify-center items-center">
+        <span className="mb-20 mt-16  w-30 text-center font-black largetext">
+          在 <code>daymd.config.js</code> 中搞定一切
+        </span>
+      </div>
+      <div className="flex items-center justify-center">
+        <iframe
+          className="shadow-lg w-9/12 ml-20 mr-20 mb-20 rounded-xl"
+          height="600px"
+          src="https://codesandbox.io/s/loving-snowflake-l2gcdv?file=/daymd.config.js"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+  );
+}
+
 export function CoolHead() {
   return (
     <div>
       <Zhanwei />
+      {/* <Parallax> */}
       <Title />
-      <BigMax />
+      {/* </Parallax> */}
+      <Parallax speed={-1}>
+        <BigMax />
+      </Parallax>
+
       <Feter />
       <Coding />
+      <Codebox />
       <StartButton />
     </div>
   );

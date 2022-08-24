@@ -23,7 +23,12 @@ function Toggle() {
 function Foot() {
   return (
     <div>
-      <footer class="footer p-10 bg-base-200 text-base-content">
+      <footer
+        style={{
+          display: configs.ifFootItems ? "" : "none",
+        }}
+        class="footer p-10 bg-base-200 text-base-content"
+      >
         {configs.FooterItems.map((props, idx) => (
           <div key={idx} {...props}>
             <span class="footer-title">{props.label}</span>
@@ -68,6 +73,15 @@ function Foot() {
         </div>
 
         <div class="md:place-self-center md:justify-self-end">
+          <div
+            style={{
+              display: configs.ifFootTheme ? "" : "none",
+            }}
+          >
+            <div>
+              <Toggle />
+            </div>
+          </div>
           <div class="grid grid-flow-col gap-4">
             {configs.socialIcon.map((props, idx) => (
               <a href={props.to} key={idx} {...props} target={"_blank"}>

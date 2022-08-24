@@ -233,3 +233,16 @@ body {
   transition: none;
   transition-delay: none;
 }
+
+/* 回到顶部 */
+#back-to-top {
+  background-color: #262a4747;
+  border: #001eff 2px solid;
+}
+
+.Totop {
+  background-color: #6878ed37 !important;
+  box-shadow: none !important;
+  border: 2px soild #001eff !important;
+  transition: all 2s ease-in-out !important;
+}
