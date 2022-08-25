@@ -3,4 +3,3 @@ export const titleToSlug = (str: string) =>
     .toLowerCase()
     .replace(/[^\w ]+/g, '')
     .replace(/ +/g, '-')
-    .charCodeAt(0)  
