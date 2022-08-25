@@ -150,7 +150,7 @@ export default function DocsPage({
         {/* 文章容器 */}
         <article
           onScrollCapture={handleScroll}
-          className={cn("grow flex flex-col overflow-hidden w-min")}
+          className={cn("markdown grow flex flex-col overflow-hidden w-min")}
         >
           <header className={cn("px-10 pt-4")}>
             {/* <Breadcrumbs crumbs={crumbs} /> */}

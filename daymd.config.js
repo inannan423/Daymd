@@ -217,7 +217,7 @@ const configs = {
   backTopText: "↑",
   // 笔记页面设置 ************************************
   // 笔记页面标题,建议为tutorial、notes等
-  notePageTitle: "快速上手",
+  notePageTitle: "介绍",
   // 笔记、博客右侧边粗体标题文字
   rightContentText: "Topics",
   // 是否显示面包屑,1：显示。0：不显示。

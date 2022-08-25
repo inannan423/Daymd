@@ -84,7 +84,7 @@ export const HeadingsAside: React.FC<
                   )}
                 >
                   <a
-                    href={`#${titleToSlug(h.title)}`}
+                    href={`#${h.title}`}
                     className={cn(
                       "px-3 py-1 w-full transition-all ease-in-out duration-600 rounded-md text-sm",
                       i === current

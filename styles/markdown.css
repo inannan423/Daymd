@@ -1,6 +1,7 @@
 /* Markdown文件格式 */
 
 
+
 code {
     counter-reset: line;
 }
@@ -24,8 +25,10 @@ code>.line::before {
 div[data-rehype-pretty-code-fragment] pre {
     padding: 10px;
     background-color: rgba(25, 25, 25) !important;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    /* border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; */
+    border-radius: 5px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -38,9 +41,8 @@ div[data-rehype-pretty-code-title] {
     font-size: 12px;
     font-weight: 700;
     height: 30px;
-    background-color: rgba(2, 104, 141, 0.698) !important;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    background-color: rgba(12, 66, 119, 0.5) !important;
+    border-radius: 5px;
     margin-top: 5px;
     color: white;
     display: flex;

@@ -3,6 +3,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('./markdown.css');
-@import url('./app.css');
+@import url("./markdown.css");
+@import url("./app.css");
+
 /* 添加你的自定义样式 */
+
+/* 可自定义Markdown样式 */
+.markdown p {
+  @apply mb-4;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  @apply font-bold mb-2 mt-2;
+}
+
+.markdown h1 {
+  @apply text-3xl;
+}
+
+.markdown h2 {
+  @apply pl-3 text-2xl border-l-8 border-accent;
+}
+
+.markdown h3 {
+  @apply text-xl pl-2 border-l-4 border-accent;
+}
+
+.markdown h4 {
+  @apply text-base;
+}
+
+.markdown code {
+  @apply text-base text-accent bg-accent bg-opacity-25;
+  border-radius: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.markdown .Text-Limit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.markdown li {
+  list-style-type: disc;
+}
+
+.markdown ul {
+  margin-bottom: 13px;
+}
+
+.markdown blockquote {
+  opacity: 0.8;
+  @apply pl-2 border-l-2 border-opacity-30 border-accent-content;
+}
+
+.markdown p a {
+  @apply text-base text-accent  underline;
+}

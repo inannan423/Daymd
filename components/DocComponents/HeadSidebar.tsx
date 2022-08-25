@@ -15,7 +15,7 @@ export const HeadSidebar: React.FC<{ tree: TNode[] }> = ({ tree }) => {
   return (
     <div
       tabIndex={0}
-      className="block xl:hidden collapse-open collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      className="mb-5 block xl:hidden collapse-open collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
     >
       <div className="collapse-title text-lg font-bold">
         {configs.smListName}

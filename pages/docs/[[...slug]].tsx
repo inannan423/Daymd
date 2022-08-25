@@ -150,16 +150,15 @@ export default function DocsPage({
         {/* 文章容器 */}
         <article
           onScrollCapture={handleScroll}
-          className={cn("grow flex flex-col overflow-hidden w-min")}
+          className={cn("markdown grow flex flex-col overflow-hidden w-min")}
         >
           <header
             style={{ display: configs.ifBread ? "" : "none" }}
-            className={cn("px-10 pt-4")}
+            className={cn("xl:block hidden px-10 pt-4")}
           >
-            <HeadSidebar tree={tree} />
             <Breadcrumbs crumbs={crumbs} />
           </header>
-
+          <HeadSidebar tree={tree} />
           {/* 不显示面包屑时的占位 */}
           <div
             style={{

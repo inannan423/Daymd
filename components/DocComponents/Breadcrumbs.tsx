@@ -16,7 +16,9 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ crumbs }) => {
         )}
       >
         <Link href={"/"}>
-          <a className={cn(" rounded-md uppercase font-medium ")}>主页</a>
+          <a className={cn("no-underline rounded-md uppercase font-medium ")}>
+            主页
+          </a>
         </Link>
         <FaChevronRight className={cn("pl-1 inline text-xs")} />
       </li>
@@ -28,7 +30,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ crumbs }) => {
           )}
         >
           <Link href={c.route}>
-            <a className={cn(" rounded-md uppercase font-medium ")}>
+            <a className={cn("no-underline rounded-md uppercase font-medium ")}>
               {c.title}
             </a>
           </Link>
