@@ -24,7 +24,6 @@ import {
   H5,
   H6,
   HeadingsAside,
-  WarningBox,
   Card,
   Warn,
   Example,
