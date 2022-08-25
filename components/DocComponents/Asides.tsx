@@ -60,15 +60,17 @@ export const HeadingsAside: React.FC<
       variants={variants}
       initial={visible ? "visible" : "hidden"}
       animate={visible ? "visible" : "hidden"}
-      className={cn("space-y-4 px-6 py-8 max-w-xs w-full")}
+      className={cn(
+        " mt-10 space-y-4 px-6 py-4 w-64 h-min border-l-2 border-opacity-25 border-blue-100"
+      )}
     >
-      <h3 className={cn("uppercase font-medium")}>
+      <h3 className={cn("uppercase font-bold text-content")}>
         {configs.rightContentText}
       </h3>
       <nav className={cn("grow")}>
         <ul className={cn("space-y-1.5")}>
           {headings.length &&
-            [{ level: 2, title: "Overview" }, ...headings]
+            [...headings]
               .filter((h) => h.level > 1)
               .map((h, i) => (
                 <li
@@ -84,10 +86,10 @@ export const HeadingsAside: React.FC<
                   <a
                     href={`#${titleToSlug(h.title)}`}
                     className={cn(
-                      "px-3 py-1 w-full rounded-md text-sm",
+                      "px-3 py-1 w-full transition-all ease-in-out duration-600 rounded-md text-sm",
                       i === current
-                        ? "text-theme-500 dark:text-theme-500 bg-theme-500/10 dark:bg-theme-500/10 duration-300"
-                        : "hover:bg-gray-200/40 hover:dark:bg-gray-800/40",
+                        ? "text-theme-500   text-accent  "
+                        : "hover:bg-accent/40 ",
                       h.level > 2 && "font-light"
                     )}
                     onClick={() => setCurrent(i)}

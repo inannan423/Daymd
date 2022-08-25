@@ -1,6 +1,7 @@
 ---
 title: Body shakes code
 excerpt: Amazing code to make your body shake.
+date: 2022-08-25
 ---
 
 ## Deduplication
@@ -25,20 +26,20 @@ According to `locale` and `route` to deduplicate the data and keep the data that
 ```
 
 ```ts title="Solution"
-const locale = Locale.EN // or Locale.ZH
+const locale = Locale.EN; // or Locale.ZH
 
 // Reduce edition
 const localeDocs = allDocs
   .sort((a) => (a.locale === locale ? -1 : 1))
   .reduce((acc, doc) => {
-    const routes = acc.map((d) => d.route)
-    if (!routes.includes(doc.route)) acc.push(doc)
-    return acc
-  }, [] as Doc[])
+    const routes = acc.map((d) => d.route);
+    if (!routes.includes(doc.route)) acc.push(doc);
+    return acc;
+  }, [] as Doc[]);
 
 // Map edition
-const map: { [key: string]: number } = {}
+const map: { [key: string]: number } = {};
 const localeDocs = allDocs
   .sort((a) => (a.locale === locale ? -1 : 1))
-  .filter((d) => (map[d.route] ? 0 : (map[d.route] = 1)))
+  .filter((d) => (map[d.route] ? 0 : (map[d.route] = 1)));
 ```

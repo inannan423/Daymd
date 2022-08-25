@@ -86,6 +86,9 @@ const configs = {
     {
       theme: "cupcake",
     },
+    {
+      theme: "lofi",
+    },
     // ...可以继续添加，请参考文档中的所有主题列表
   ],
   // 是否需要大页脚，1：需要，0：不需要
@@ -213,10 +216,48 @@ const configs = {
   // 回到顶部按钮内的文字，您可以换成”Top“或者”🌵“甚至”❤“等字符
   backTopText: "↑",
   // 笔记页面设置 ************************************
-  // 笔记页面标题
-  notePageTitle: "Notes",
+  // 笔记页面标题,建议为tutorial、notes等
+  notePageTitle: "快速上手",
   // 笔记右侧边粗体文字
   rightContentText: "Topics",
+  // 是否显示面包屑,1：显示。0：不显示。
+  ifBread: 1,
+  // 是否显示右边主题栏,1：显示。0：不显示。
+  ifRightBar: 1,
+  // 特殊卡片的标题文字，支持中英文和emoji
+  cardsInDoc: {
+    // "注意"卡片的固定文字显示，示例：”注意“、”Warning！“、”⚠“、”警告“
+    Warning: "注意",
+    Tip: "提示",
+    Danger: "危险",
+    Note: "笔记",
+    Example: "举例",
+  },
+  // Markdown中代码块主题样式
+  /**
+   * 可用主题：
+   * 'monokai'
+   * 'monokai'
+   * 'nord'
+   * 'one-dark-pro'
+   * 'poimandres'
+   * 'rose-pine-dawn'
+   * 'rose-pine-moon'
+   * 'rose-pine'
+   * 'slack-dark'
+   * 'slack-ochin'
+   * 'solarized-dark'
+   * 详见daymd文档
+   */
+  mdCodeTheme: "one-dark-pro",
+  // Doc页面时间显示前面的文字
+  timeText: "Last Updated:",
+  // 文章底部是否显示附属链接,0为不显示
+  ifDocLink: 1,
+  // 文章底部的附属链接文字
+  docLinkText: "文档地址",
+  // 文章底部附属链接地址，你可以填写你的Github仓库，也可以为你的公众号引流
+  docLinkUrl: "https://github.com/inannan423/Daymd/tree/main/content/docs",
 };
 
 module.exports = configs;

@@ -1,0 +1,280 @@
+/* 非必要请不要动下面的样式 */
+p {
+    @apply mb-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-bold mb-1;
+}
+
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-xl;
+}
+
+.Text-Limit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.select {
+    transition: all 0.5s ease-in-out;
+    border: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+/* 滚动条有滑块的轨道部分 */
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+/* 滚动条滑块(竖向:vertical 横向:horizontal) */
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: #12bcf454;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+}
+
+/* 滚动条滑块hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #12bcf4e2;
+}
+
+/* 同时有垂直和水平滚动条时交汇的部分 */
+::-webkit-scrollbar-corner {
+    display: block;
+    /* 修复交汇时出现的白块 */
+}
+
+.PostView {
+    margin-top: 20rem;
+}
+
+.welwordko {
+    z-index: 100;
+    font-size: 6rem;
+    font-weight: 1000;
+    position: relative;
+    /* color: rgb(173, 219, 255); */
+    background: linear-gradient(to right, rgb(50, 109, 248), rgba(135, 236, 246, 1));
+    /* background-image: linear-gradient(to right, orange, purple); */
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 14rem;
+    margin-bottom: 23rem;
+    font-family: 'bigsizefront';
+    opacity: 0.5;
+    /* animation: bgp 5s infinite linear; */
+}
+
+.colorful {
+    background: linear-gradient(to right, rgb(51, 149, 255), rgb(131, 69, 255));
+    /* background-image: linear-gradient(to right, orange, purple); */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+body {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.circle1 {
+    left: 13rem;
+    top: -26.44rem;
+    width: 60rem;
+    height: 60rem;
+    background: linear-gradient(90deg, rgba(150, 255, 244, 0.813) 0%, rgba(0, 71, 252, 0.806) 100%);
+    border-radius: 50%;
+    opacity: 0.2;
+    position: fixed;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.leftmax {
+    left: 20rem
+}
+
+.rightmax {
+    right: 20rem
+}
+
+.csize {
+    height: 70%;
+    width: 70%;
+}
+
+.largetext {
+    font-size: 2rem;
+}
+
+.startbtn {}
+
+/* From uiverse.io by @menezes11 */
+.startbtn {
+    position: relative;
+    padding: 1em 1.8em;
+    outline: none;
+    border: 2px solid #303030;
+    background: #aeaeae15;
+    color: #520eff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.startbtn:hover {
+    box-shadow: 0 0 10px #5117ff, 0 0 25px #5b6eff, 0 0 50px #4588fb;
+    transition-delay: 0.6s;
+}
+
+.startbtn span {
+    position: absolute;
+}
+
+.startbtn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+}
+
+.startbtn:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+}
+
+.startbtn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+}
+
+.startbtn:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+}
+
+.startbtn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+}
+
+.startbtn:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+}
+
+.startbtn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+}
+
+.startbtn:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+}
+
+.startbtn:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+}
+
+.startbtn:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+}
+
+/* 回到顶部 */
+#back-to-top {
+    background-color: #262a4747;
+    border: #001eff 2px solid;
+}
+
+.Totop {
+    background-color: #6878ed37 !important;
+    box-shadow: none !important;
+    border: 2px soild #001eff !important;
+    transition: all 2s ease-in-out !important;
+}
+
+/* From uiverse.io by @alexruix */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #7988f910;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(76, 121, 234, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(111, 47, 249, 0.1);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}

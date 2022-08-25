@@ -29,6 +29,11 @@ export default defineDocumentType(() => ({
       description: 'The excerpt of the document',
       required: true,
     },
+    date: {
+      type: 'date',
+      description: 'The date of the document',
+      required: true,
+    },
   },
   computedFields: {
     route: {

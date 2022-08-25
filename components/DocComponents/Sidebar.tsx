@@ -13,14 +13,18 @@ export const Sidebar: React.FC<{ tree: TNode[] }> = ({ tree }) => {
   const { t } = useTranslation("common");
   return (
     <aside
-      className={cn("sticky  max-h-screen  flex  flex-col max-w-xs w-full ")}
+      className={cn(
+        "hidden xl:flex sticky border-r-2 border-opacity-25 border-blue-100 max-h-screen    flex-col "
+      )}
     >
       {/* 搜索 */}
       {/* <div className={cn("flex flex-col pl-6 pr-4 py-4")}>
         <SearchIn />
       </div> */}
-      <div className="grow flex flex-col space-y-4 pl-4 pr-4 py-4 overflow-y-hidden">
-        <nav className={cn("relative grow overflow-y-scroll scrollbar")}>
+      <div className="grow flex flex-col space-y-4 pl-2 pr-2 py-2 overflow-y-hidden">
+        <nav
+          className={cn("z-0 w-64 relative grow overflow-y-scroll scrollbar")}
+        >
           <Tree tree={tree} level={0} />
         </nav>
         <div className={cn("flex flex-col items-center space-y-2")}>

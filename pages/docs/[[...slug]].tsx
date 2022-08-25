@@ -4,6 +4,9 @@ import { useState } from "react";
 import cn from "classnames";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useMDXComponent } from "next-contentlayer/hooks";
+// import { WarningBox } from "../../components/DocComponents"
+import moment from "moment";
+import Link from "next/link";
 import configs from "../../daymd.config";
 import type {
   GetStaticPaths,
@@ -14,22 +17,26 @@ import type {
 import {
   Aside,
   Breadcrumbs,
+  SearchIn,
   H2,
   H3,
   H4,
   H5,
   H6,
   HeadingsAside,
+  WarningBox,
+  Card,
+  Warn,
   SandpackAside,
-} from "../../components/doc";
+} from "../../components/DocComponents";
 import { generatePaths } from "../../utils/generate-paths";
 import { DocHeading, DocMeta } from "../../src/contentlayer/types/doc";
 import { allDocs, Doc } from "../../.contentlayer/generated/index";
 import { generateDocsTree, TNode } from "../../utils/generate-docs-tree";
-import { Sidebar } from "../../components/doc/Sidebar";
+import { Sidebar } from "../../components/DocComponents/Sidebar";
 import { titleToSlug } from "../../utils/title-to-slug";
 import { Locale } from "../../typings";
-
+let Path1 = "";
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: [
     ...generatePaths<DocMeta>(allDocs, Locale.EN),
@@ -70,7 +77,7 @@ export const getStaticProps: GetStaticProps<
     ...doc.meta.map(({ slug }: DocMeta) => {
       crumb.route += crumb.route === "" ? slug : "/" + slug;
       const title = localeDocs.find((d) => d.route === crumb.route)?.title;
-
+      // Path1 = crumb.route;
       return { route: "/docs/" + crumb.route, title };
     }),
   ];
@@ -102,6 +109,8 @@ export default function DocsPage({
     h4: H4,
     h5: H5,
     h6: H6,
+    Card,
+    Warn,
   };
 
   const handleScroll = () => {
@@ -110,16 +119,18 @@ export default function DocsPage({
     doc.headings.map((h: DocHeading, i: number) => {
       const slug = titleToSlug(h.title);
       const el = document.getElementById(slug);
-      if (el && el.getBoundingClientRect().top < 130) cur = i + 20;
+      if (el && el.getBoundingClientRect().top < 130) cur = i;
     });
 
     setActive(cur);
   };
 
   return (
-    <div>
+    <div className="flex flex-col">
       {/* <div className={cn("h-32")}></div> */}
-      <NavBar />
+      <div style={{ zIndex: "1000" }} className="z-50 ">
+        <NavBar />
+      </div>
       <div
         className={cn(
           " sticky min-h-screen grow flex flex-row w-screen overflow-auto"
@@ -130,36 +141,64 @@ export default function DocsPage({
         {/* 文章容器 */}
         <article
           onScrollCapture={handleScroll}
-          className={cn("grow flex flex-col overflow-hidden")}
+          className={cn("grow flex flex-col overflow-hidden w-min")}
         >
-          <header className={cn("px-10 pt-4")}>
+          <header
+            style={{ display: configs.ifBread ? "" : "none" }}
+            className={cn("px-10 pt-4")}
+          >
             <Breadcrumbs crumbs={crumbs} />
           </header>
+          {/* 不显示面包屑时的占位 */}
+          <div
+            style={{
+              height: "20px",
+              display: configs.ifBread ? "none" : "block",
+            }}
+          ></div>
           <main
             className={cn(
               "relative max-h-screen grow px-10 pb-10 max-w-none w-full overflow-y-scroll scrollbar-lg"
             )}
           >
-            <h1
-              id="overview"
-              className={cn("leading-snug text-5xl font-medium")}
-            >
+            <h1 className={cn("leading-snug  text-4xl font-semibold")}>
               {doc.title}
             </h1>
+
             <MDXContent components={MDXComponents} />
+            <div className="bottom-1 mt-20 flex-wrap w-full h-min flex justify-between bg-accent bg-opacity-25 rounded-lg">
+              <div className="p-2 ml-2 font-mono font-semibold italic ">
+                {configs.timeText}
+                {moment(doc.date).format("YYYY-MM-DD")}
+              </div>
+              <a
+                target={"_blank"}
+                style={{ display: configs.ifDocLink ? "" : "none" }}
+                href={configs.docLinkUrl}
+              >
+                <div className="cursor-pointer p-2 ml-2 mr-2 font-bold">
+                  {configs.docLinkText}
+                </div>
+              </a>
+            </div>
           </main>
         </article>
-        <Aside>
-          {(isSandpack) => (
-            <>
-              <HeadingsAside
-                headings={doc.headings}
-                active={active}
-                visible={!isSandpack}
-              />
-            </>
-          )}
-        </Aside>
+        <div
+          className="w-64  hidden xl:flex"
+          style={{ display: configs.ifRightBar ? "" : "none" }}
+        >
+          <Aside>
+            {(isSandpack) => (
+              <>
+                <HeadingsAside
+                  headings={doc.headings}
+                  active={active}
+                  visible={!isSandpack}
+                />
+              </>
+            )}
+          </Aside>
+        </div>
       </div>
     </div>
   );

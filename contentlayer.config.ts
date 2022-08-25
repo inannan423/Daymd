@@ -1,5 +1,5 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
-
+import configs from './daymd.config'
 import PrettyCode from 'rehype-pretty-code'
 
 import { CONTENT_DIR } from './src/configs/constants'
@@ -11,10 +11,7 @@ import dark from './src/themes/moonlight-ii.json'
 
 // 代码高亮
 const options = {
-  theme: {
-    light,
-    dark,
-  },
+  theme: configs.mdCodeTheme,
   onVisitLine(node) {
     if (!node.children.length) {
       node.children = [{ type: 'text', value: ' ' }]

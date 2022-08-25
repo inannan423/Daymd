@@ -5,12 +5,9 @@ import configs from "../daymd.config";
 
 function Nav() {
   return (
-    <div
-      style={{ zIndex: "10000" }}
-      class="backdrop-blur-md bg-opacity-10 w-screen  navbar  bg-base-100"
-    >
+    <div class="shadow-sm backdrop-blur-md bg-opacity-10 w-screen  navbar  bg-base-100">
       <div class="navbar-start">
-        <div class="dropdown">
+        <div style={{ zIndex: "1000" }} class="dropdown">
           <label tabindex="0" class="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +48,9 @@ function Nav() {
           </div>
         </div>
         <Link href="/">
-          <a class="btn btn-ghost normal-case text-xl">{configs.title}</a>
+          <a class="btn font-sans btn-ghost normal-case text-xl">
+            {configs.title}
+          </a>
         </Link>
       </div>
 

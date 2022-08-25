@@ -1,0 +1,49 @@
+/* Markdown文件格式 */
+
+
+code {
+    counter-reset: line;
+}
+
+code>.line::before {
+    counter-increment: line;
+    content: counter(line);
+
+    /* Other styling */
+    display: inline-block;
+    width: 1rem;
+    margin-right: 2rem;
+    text-align: right;
+    color: gray;
+}
+
+
+
+
+
+div[data-rehype-pretty-code-fragment] pre {
+    padding: 10px;
+    background-color: rgba(25, 25, 25) !important;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-bottom: 5px;
+}
+
+div[data-rehype-pretty-code-fragment] .line {
+    background-color: rgba(25, 25, 25) !important;
+}
+
+div[data-rehype-pretty-code-title] {
+    padding: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    height: 30px;
+    background-color: rgba(2, 104, 141, 0.698) !important;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-top: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,5 +1,6 @@
 import { Doc } from '../.contentlayer/generated'
 import { DocMeta } from '../src/contentlayer/types/doc'
+import configs from '../daymd.config'
 
 export type TNode = {
   title: string
@@ -38,7 +39,7 @@ export function generateDocsTree(
   if (level === 0) {
     return [
       {
-        title: 'NOTES',
+        title: configs.notePageTitle,
         route: '/docs',
         children: [],
       },
