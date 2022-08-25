@@ -29,7 +29,7 @@ function Feature({ file, title, desc }) {
         <img className="h-80 " src={file} alt="banner" />
       </div>
       <div className="text-center pl-10 pr-10">
-        <h3 className="text-lg">{title}</h3>
+        <h3 className="text-lg font-bold">{title}</h3>
         <p className="text-center  text-sm">{desc}</p>
       </div>
     </div>

@@ -1,8 +1,8 @@
-import { defineDocumentType, defineNestedType } from 'contentlayer/source-files'
+import { defineDocumentType } from 'contentlayer/source-files'
 
 import { bundleMDX } from 'mdx-bundler'
+import { tocPlugin } from '../plugins'
 import * as utils from '../utils'
-import * as plugins from '../plugins'
 
 export type PostHeading = {
   level: 1 | 2 | 3
@@ -10,6 +10,7 @@ export type PostHeading = {
 }
 
 export type PostMeta = {
+  order: number
   slug: string
 }
 
@@ -20,56 +21,86 @@ export default defineDocumentType(() => ({
   fields: {
     title: {
       type: 'string',
-      description: 'The title of the post',
+      description: 'The title of the Postument',
       required: true,
     },
     excerpt: {
       type: 'string',
-      description: 'The excerpt of the post',
+      description: 'The excerpt of the Postument',
       required: true,
     },
     date: {
       type: 'date',
-      description: 'The date of the post',
+      description: 'The date of the Postument',
       required: true,
     },
   },
   computedFields: {
+    route: {
+      type: 'string',
+      description: 'The route path of the page relative to site root.',
+      resolve: (Post) =>
+        Post._raw.flattenedPath
+          // remove locale suffix
+          .split('.')[0]
+          .split('/')
+          // skip 'Posts'
+          .slice(1)
+          // skip 'index' with locale suffix
+          .filter((name: string) => name.match(/^index$/) === null)
+          // replace order prefix
+          .map((name: string) => name.replace(/^\d+-/, ''))
+          .join('/'),
+    },
     locale: {
       type: 'string',
-      description: 'The locale of the post',
+      description: 'The locale of the Postument',
       resolve: utils.getLocale,
     },
     meta: {
       type: 'json',
-      description: 'The slug meta of the post',
-      resolve: (post) => ({
-        slug: post._raw.flattenedPath
+      description: 'The slugs meta of the Postument',
+      resolve: (Post) =>
+        Post._raw.flattenedPath
+          // remove locale suffix
+          .split('.')[0]
           .split('/')
-          // skip '/posts/[year]' prefix
-          .slice(-1)[0]
-          .split('.')[0],
-      }),
+          // skip 'Posts' prefix
+          .slice(1)
+          // skip 'index' with locale suffix
+          .filter((name: string) => name.match(/^index$/) === null)
+          .map((name) => {
+            const reg = /^(\d+)?-?([a-z0-9\-]+)?$/
+            const [, order = 0, slug] = name.match(reg) ?? []
+
+            if (!slug) throw new Error(`Invalid slug: ${name}`)
+
+            return {
+              order: Number(order),
+              slug,
+            }
+          }),
     },
     headings: {
       type: 'json',
-      resolve: async (doc) => {
+      resolve: async (Post) => {
         const headings: PostHeading[] = []
 
         await bundleMDX({
-          source: doc.body.raw,
+          source: Post.body.raw,
           mdxOptions: (opts) => {
             opts.remarkPlugins = [
               ...(opts.remarkPlugins ?? []),
-              plugins.tocPlugin(headings),
+              tocPlugin(headings),
             ]
             return opts
           },
         })
 
-        return [{ level: 1, title: doc.title }, ...headings]
+        return [{ level: 1, title: Post.title }, ...headings]
       },
     },
+    last_edited: { type: 'date', resolve: utils.getLastEditedDate },
   },
   extensions: {},
 }))

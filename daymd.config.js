@@ -54,8 +54,8 @@ const configs = {
       to: "/docs",
     },
     {
-      name: "Theme",
-      to: "",
+      name: "Blog",
+      to: "/posts",
     },
     // ...可以继续添加
   ],
@@ -218,12 +218,14 @@ const configs = {
   // 笔记页面设置 ************************************
   // 笔记页面标题,建议为tutorial、notes等
   notePageTitle: "快速上手",
-  // 笔记右侧边粗体文字
+  // 笔记、博客右侧边粗体标题文字
   rightContentText: "Topics",
   // 是否显示面包屑,1：显示。0：不显示。
   ifBread: 1,
   // 是否显示右边主题栏,1：显示。0：不显示。
   ifRightBar: 1,
+  // 在博客页面是否显示右边主题栏,1：显示。0：不显示。
+  ifPostRightBar: 1,
   // 特殊卡片的标题文字，支持中英文和emoji
   cardsInDoc: {
     // "注意"卡片的固定文字显示，示例：”注意“、”Warning！“、”⚠“、”警告“
@@ -233,6 +235,10 @@ const configs = {
     Note: "笔记",
     Example: "举例",
   },
+  // 博客页面的标题
+  postPageTitle: "我的博客",
+  // 小屏幕时菜单名称
+  smListName: "目录",
   // Markdown中代码块主题样式
   /**
    * 可用主题：
@@ -252,6 +258,8 @@ const configs = {
   mdCodeTheme: "one-dark-pro",
   // Doc页面时间显示前面的文字
   timeText: "Last Updated:",
+  // post页面时间显示前面的文字
+  postTimeText: "Date:",
   // 文章底部是否显示附属链接,0为不显示
   ifDocLink: 1,
   // 文章底部的附属链接文字
