@@ -39,7 +39,7 @@ function StarHero() {
 function Heros() {
   return (
     <div
-      class="hero mt-2 min-h-screen"
+      class="hero  min-h-screen"
       style={{
         background: configs.heroBg,
         backgroundSize: "cover",

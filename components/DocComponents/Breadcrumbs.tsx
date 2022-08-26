@@ -12,7 +12,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ crumbs }) => {
     <ul className="text-base flex h-10">
       <li
         className={cn(
-          "flex px-1 items-center transition-all duration-500 ease-linear text-theme-500 hover:text-accent-focus"
+          "flex px-1 items-center transition-all duration-500 ease-linear text-theme-500 hover:text-primary-focus"
         )}
       >
         <Link href={"/"}>
@@ -26,7 +26,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ crumbs }) => {
         <li
           key={i}
           className={cn(
-            "flex px-1 items-center transition-all duration-500 ease-linear text-theme-500 hover:text-accent-focus"
+            "flex px-1 items-center transition-all duration-500 ease-linear text-theme-500 hover:text-primary-focus"
           )}
         >
           <Link href={c.route}>

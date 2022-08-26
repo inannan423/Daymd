@@ -30,6 +30,8 @@ div[data-rehype-pretty-code-fragment] pre {
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+    overflow-x: hidden;
+    @apply overflow-x-auto;
 }
 
 div[data-rehype-pretty-code-fragment] .line {

@@ -6,6 +6,7 @@ export type TNode = {
   title: string
   route: string
   children: Array<TNode>
+  
 }
 
 export function generateDocsTree(

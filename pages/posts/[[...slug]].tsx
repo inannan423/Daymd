@@ -32,8 +32,9 @@ import {
   Note,
   Danger,
   PostSidebar,
-  SandpackAside,
   HeadSidebar,
+  To,
+  Collapses,
 } from "../../components/DocComponents";
 import { generatePaths } from "../../utils/generate-paths";
 import { PostHeading, PostMeta } from "../../src/contentlayer/types/post";
@@ -120,6 +121,7 @@ export default function DocsPage({
     Tips,
     Note,
     Danger,
+    To,
   };
 
   const handleScroll = () => {
@@ -136,21 +138,18 @@ export default function DocsPage({
 
   return (
     <div className="flex flex-col">
-      {/* <div className={cn("h-32")}></div> */}
       <div style={{ zIndex: "1000" }} className="z-50 ">
         <NavBar />
       </div>
-      <div
-        className={cn(
-          " sticky min-h-screen grow flex flex-row w-screen overflow-auto"
-        )}
-      >
+      <div className={cn(" h-full grow flex flex-row w-screen ")}>
         {/* 笔记页面列表 */}
-        <PostSidebar tree={tree} />
+        <div style={{ position: "sticky", top: "0" }}>
+          <PostSidebar tree={tree} />
+        </div>
         {/* 文章容器 */}
         <article
           onScrollCapture={handleScroll}
-          className={cn("markdown grow flex flex-col overflow-hidden w-min")}
+          className={cn("markdown grow flex flex-col  w-min")}
         >
           <header className={cn("px-10 pt-4")}>
             {/* <Breadcrumbs crumbs={crumbs} /> */}
@@ -163,9 +162,7 @@ export default function DocsPage({
             }}
           ></div>
           <main
-            className={cn(
-              "relative max-h-screen grow px-10 pb-10 max-w-none w-full overflow-y-scroll scrollbar-lg"
-            )}
+            className={cn("relative h-max grow px-10 pb-10 max-w-none w-full ")}
           >
             <h1 className={cn("leading-snug  text-4xl font-semibold")}>
               {doc.title}

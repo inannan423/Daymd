@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavBar } from "../../components/NavBar";
 import { useState } from "react";
 import cn from "classnames";
@@ -30,9 +31,9 @@ import {
   Tips,
   Note,
   Danger,
-  SandpackAside,
   Sidebar,
   HeadSidebar,
+  To,
 } from "../../components/DocComponents";
 import { generatePaths } from "../../utils/generate-paths";
 import { DocHeading, DocMeta } from "../../src/contentlayer/types/doc";
@@ -40,6 +41,7 @@ import { allDocs, Doc } from "../../.contentlayer/generated/index";
 import { generateDocsTree, TNode } from "../../utils/generate-docs-tree";
 import { titleToSlug } from "../../utils/title-to-slug";
 import { Locale } from "../../typings";
+import { ThemeChange } from "../../components/ThemeChange";
 let Path1 = "";
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: [
@@ -119,6 +121,8 @@ export default function DocsPage({
     Tips,
     Note,
     Danger,
+    ThemeChange,
+    To,
   };
 
   const handleScroll = () => {
@@ -139,17 +143,15 @@ export default function DocsPage({
       <div style={{ zIndex: "1000" }} className="z-50 ">
         <NavBar />
       </div>
-      <div
-        className={cn(
-          " sticky min-h-screen grow flex flex-row w-screen overflow-auto"
-        )}
-      >
+      <div className={cn("  min-h-screen grow flex flex-row w-screen ")}>
         {/* 笔记页面列表 */}
-        <Sidebar tree={tree} />
+        <div style={{ position: "sticky", top: "0" }}>
+          <Sidebar tree={tree} />
+        </div>
         {/* 文章容器 */}
         <article
           onScrollCapture={handleScroll}
-          className={cn("markdown grow flex flex-col overflow-hidden w-min")}
+          className={cn("markdown grow flex flex-col  w-min")}
         >
           <header
             style={{ display: configs.ifBread ? "" : "none" }}
@@ -167,7 +169,8 @@ export default function DocsPage({
           ></div>
           <main
             className={cn(
-              "relative max-h-screen grow px-10 pb-10 max-w-none w-full overflow-y-scroll scrollbar-lg"
+              //overflow-y-scroll scrollbar-lg max-h-screen
+              " h-max  grow px-10 pb-10 max-w-none w-full "
             )}
           >
             <h1 className={cn("leading-snug  text-4xl font-semibold")}>
@@ -193,8 +196,12 @@ export default function DocsPage({
           </main>
         </article>
         <div
-          className="w-64  hidden xl:flex"
-          style={{ display: configs.ifRightBar ? "" : "none" }}
+          className="h-full w-64 hidden xl:flex"
+          style={{
+            display: configs.ifRightBar ? "" : "none",
+            position: "sticky",
+            top: "0",
+          }}
         >
           <Aside>
             {(isSandpack) => (

@@ -33,11 +33,17 @@ const configs = {
   // 标签图标
   favicon:
     "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/daymd_logo1.svg",
+  // NavBar 的样式，参数值 1、2
+  navTheme: 2,
   // 导航栏logo是否显示,0为不显示，1为显示
   isNavLogo: 1,
   // 导航栏logo图片链接
   navLogo:
     "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/daymd_logo1.svg",
+  // 导航栏透明度，bg-opacity-请不要修改，后面的数字越大越不透明，值为每10增加，范围0~100
+  // 例如56、45等非整十的值无效
+  // bg-opacity-xx后面可以添加其他 Tailwind 样式类
+  navOpacity: "bg-opacity-60",
   // Hero的背景图片,限heroMode：1,使用 https://api.maho.cc/random-img/pc.php 接口可以每刷新一次得到不同的二次元背景，详见文档
   heroBg:
     "url(https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/BK@1.5x.png)",
@@ -72,14 +78,15 @@ const configs = {
   // 选用的主题
   themeSelect: [
     {
+      theme: "winter",
+    },
+    {
       theme: "forest",
     },
     {
       theme: "dark",
     },
-    {
-      theme: "light",
-    },
+
     {
       theme: "night",
     },

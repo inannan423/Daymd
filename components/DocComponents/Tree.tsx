@@ -123,7 +123,7 @@ const TreeNodeLink: React.FC<TreeNodeLinkProps> = ({
         className={cn(
           "flex font-semibold antialiased transition-all duration-500 ease-in-out text-base z-0 items-center justify-between px-3 py-1 rounded-md",
           route === activeRoute
-            ? " text-theme-500 dark:text-theme-500 bg-accent bg-opacity-20 dark:bg-theme-500/10"
+            ? " text-theme-500 dark:text-theme-500 bg-primary bg-opacity-20 dark:bg-theme-500/10"
             : "hover:bg-gray-200/40 hover:dark:bg-gray-800/40",
           !collapsible && level > 0 ? "font-light" : "py-1"
         )}

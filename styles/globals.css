@@ -27,11 +27,11 @@
 }
 
 .markdown h2 {
-  @apply pl-3 text-2xl border-l-8 border-accent;
+  @apply pl-3 text-2xl border-l-8 border-primary;
 }
 
 .markdown h3 {
-  @apply text-xl pl-2 border-l-4 border-accent;
+  @apply text-xl pl-2 border-l-4 border-primary;
 }
 
 .markdown h4 {
@@ -39,12 +39,15 @@
 }
 
 .markdown code {
-  @apply text-base text-accent bg-accent bg-opacity-25;
+  @apply text-base text-primary bg-primary bg-opacity-25;
   border-radius: 0.25rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
 
+.markdown pre {
+  @apply overflow-x-auto;
+}
 .markdown .Text-Limit {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -68,4 +71,16 @@
 
 .markdown p a {
   @apply text-base text-accent  underline;
+}
+
+.markdown img {
+  @apply rounded-xl;
+}
+
+div[data-rehype-pretty-code-fragment] pre {
+  @apply overflow-x-auto;
+}
+
+.line {
+  @apply w-min;
 }

@@ -1,36 +1,23 @@
 import type React from "react";
 import cn from "classnames";
-import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import { FaGithubAlt } from "react-icons/fa";
-
-import { IconJuejin } from "../icons";
-import { SearchIn } from "./SearchIn";
 import { PostTree } from "./PostTree";
 import { TNode } from "../../utils/generate-docs-tree";
 import configs from "daymd.config";
+import { Collapses } from "./Collapse";
 
 export const HeadSidebar: React.FC<{ tree: TNode[] }> = ({ tree }) => {
   const { t } = useTranslation("common");
   return (
-    <div
-      tabIndex={0}
-      className="mb-5 block xl:hidden collapse-open collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
-    >
-      <div className="collapse-title text-lg font-bold">
-        {configs.smListName}
-      </div>
-      <div className="collapse-content">
-        {/* <aside className={cn("sticky w-full max-h-screen  flex-col ")}> */}
-        {/* <div className="grow flex flex-col space-y-4  overflow-y-hidden"> */}
+    //  {configs.smListName}
+    <div className=" xl:hidden flex flex-col items-center">
+      <Collapses>
         <nav
           className={cn("z-10 w-64 relative grow overflow-y-scroll scrollbar")}
         >
           <PostTree tree={tree} level={0} />
         </nav>
-        {/* </div> */}
-        {/* </aside> */}
-      </div>
+      </Collapses>
     </div>
   );
 };
