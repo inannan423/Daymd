@@ -9,7 +9,7 @@ const WebsiteCard = memo(({ website }: { website: Website }) => (
     key={website.name}
     className="hover:bg-primary hover:bg-opacity-30 transition-all 1s ease-in-out grid grid-cols-6 justify-items-center p-1 border-2 border-primary rounded-md "
   >
-    <img
+    {/* <img
       src={
         // typeof website.logo === "string"
         //   ? website.logo
@@ -18,7 +18,7 @@ const WebsiteCard = memo(({ website }: { website: Website }) => (
       }
       alt={website.name}
       className="col-span-2  self-center w-16 h-16 rounded-full ring ring-primary ring-offset-1"
-    />
+    /> */}
     <div className="pl-4 flex flex-col place-content-start  self-center col-span-3 content-start">
       <div className={clsx(styles.websiteCardHeader)}>
         <h4 className="text-base pt-1 font-bold">
