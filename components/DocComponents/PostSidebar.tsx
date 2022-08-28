@@ -21,7 +21,7 @@ export const PostSidebar: React.FC<{ tree: TNode[] }> = ({ tree }) => {
         <nav
           className={cn("z-0 w-64 relative grow overflow-y-scroll scrollbar")}
         >
-          <PostTree tree={tree} level={0} />
+          <PostTree tree={tree.reverse()} level={0} />
         </nav>
         <div className={cn("flex flex-col items-center space-y-2")}>
           <div className={cn("flex space-x-6")}></div>

@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Parallax from "react-rellax";
 import configs from "../daymd.config";
 import { Feter } from "./Feter";
+import { Poweredby } from "./Powerby";
 const PageData = {
   headTitle: "Get it all done",
   headTitle1: "with detailed APIs",
@@ -139,6 +140,9 @@ export function CoolHead() {
       <Coding />
       <Codebox />
       <StartButton />
+      <div className="w-screen h-72 p-5 justify-center items-center">
+        <Poweredby />
+      </div>
     </div>
   );
 }

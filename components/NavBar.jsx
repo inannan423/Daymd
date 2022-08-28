@@ -59,7 +59,7 @@ function Nav() {
       <div class="navbar-end">
         {configs.navIcons.map((props, idx) => (
           <a href={props.to} key={idx} {...props} target={"_blank"}>
-            <button class="btn btn-ghost btn-circle">
+            <button class="btn btn-ghost btn-circle  h-2 p-3">
               <img src={props.icon} alt={props.name} />
             </button>
           </a>
@@ -129,7 +129,7 @@ function Nav2() {
       <div class="navbar-end">
         {configs.navIcons.map((props, idx) => (
           <a href={props.to} key={idx} {...props} target={"_blank"}>
-            <button class="btn btn-ghost btn-circle">
+            <button class="btn btn-ghost btn-circle h-2 p-3">
               <img src={props.icon} alt={props.name} />
             </button>
           </a>

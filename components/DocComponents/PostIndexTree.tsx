@@ -3,11 +3,11 @@ import { useState } from "react";
 import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import Parallax from "react-rellax";
 import { motion, Variants } from "framer-motion";
 
 import { FaChevronRight } from "react-icons/fa";
-import { TNode } from "../../utils/generate-docs-tree";
+import { TNode } from "../../utils/generate-posts-tree";
 import { useMount } from "react-use";
 
 interface TreeProps {
@@ -15,7 +15,7 @@ interface TreeProps {
   level: number;
 }
 
-export const PostTree: React.FC<TreeProps> = ({ tree, level }) => (
+export const PostIndexTree: React.FC<TreeProps> = ({ tree, level }) => (
   <ul
     className={cn(
       "relative space-y-2",
@@ -72,7 +72,9 @@ const TNodes: React.FC<TreeNodeProps> = ({ node, level }) => {
   return (
     <li className={cn("relative")}>
       <TreeNodeLink
+        desc={node.desc}
         title={node.title}
+        backpic={node.backpic}
         route={node.route}
         level={level}
         activeRoute={activeRoute}
@@ -92,7 +94,7 @@ const TNodes: React.FC<TreeNodeProps> = ({ node, level }) => {
             uncollapsed || "h-0 opacity-0 duration-0"
           )}
         >
-          <PostTree tree={node.children} level={level + 1} />
+          <PostIndexTree tree={node.children} level={level + 1} />
         </motion.div>
       )}
     </li>
@@ -100,7 +102,9 @@ const TNodes: React.FC<TreeNodeProps> = ({ node, level }) => {
 };
 
 interface TreeNodeLinkProps {
+  desc: string;
   title: string;
+  backpic: string;
   route: string;
   level: number;
   activeRoute: string;
@@ -111,7 +115,9 @@ interface TreeNodeLinkProps {
 
 const TreeNodeLink: React.FC<TreeNodeLinkProps> = ({
   title,
+  desc,
   route,
+  backpic,
   level,
   activeRoute,
   collapsible,
@@ -119,27 +125,16 @@ const TreeNodeLink: React.FC<TreeNodeLinkProps> = ({
   onClick,
 }) => (
   <Link href={route}>
-    <a className="z-0" onClick={onClick}>
-      <span
-        className={cn(
-          "flex font-normal antialiased transition-all duration-500 ease-in-out text-base z-0 items-center justify-between  py-1 rounded-md",
-          route === activeRoute ? " text-accent" : "",
-          !collapsible && level > 0 ? "font-light" : "py-1"
-        )}
+    <div className="w-full cursor-pointer my-2">
+      <div
+        style={{ backgroundImage: backpic }}
+        className="hover:opacity-80 transition-all duration-1000 ease-in-out bg-no-repeat bg-cover card h-42  bg-base-100 shadow-xl image-full"
       >
-        {title}
-        {collapsible && (
-          <FaChevronRight
-            className={cn(
-              "shrink-0 text-sm transition-transform duration-300",
-              route === activeRoute
-                ? "text-theme-500 dark:text-theme-500"
-                : "text-gray-300 dark:text-gray-500",
-              uncollapsed && "rotate-90"
-            )}
-          />
-        )}
-      </span>
-    </a>
+        <div className="card-body w-full">
+          <h2 className="card-title">{title}</h2>
+          <p>{desc}</p>
+        </div>
+      </div>
+    </div>
   </Link>
 );

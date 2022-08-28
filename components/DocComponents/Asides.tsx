@@ -4,7 +4,7 @@ import cn from "classnames";
 import { useTranslation } from "next-i18next";
 
 // import { Sandpack, SandpackToggle } from "../sandpack";
-import { DocHeading } from "../../src/contentlayer/types/doc";
+import { PostHeading } from "../../src/contentlayer/types/post";
 import { motion } from "framer-motion";
 import { titleToSlug } from "../../utils/title-to-slug";
 import configs from "../../daymd.config";
@@ -46,7 +46,7 @@ const variants = {
 
 export const HeadingsAside: React.FC<
   AsidesProps<{
-    headings: DocHeading[];
+    headings: PostHeading[];
     active: number;
   }>
 > = ({ headings, active }) => {
@@ -56,8 +56,7 @@ export const HeadingsAside: React.FC<
   useEffect(() => setCurrent(active), [active]);
 
   return (
-    <motion.aside
-      variants={variants}
+    <div
       style={{ position: "sticky", top: "0" }}
       className={cn(
         "h-min  mt-10 space-y-4 px-6 py-4 w-64  border-l-2 border-opacity-25 border-blue-100"
@@ -99,6 +98,6 @@ export const HeadingsAside: React.FC<
               ))}
         </ul>
       </nav>
-    </motion.aside>
+    </div>
   );
 };

@@ -2,7 +2,7 @@
 const configs = {
   // 网站名称
   title: "Daymd.",
-  // hero模式,0：不显示；1：背景图模式；2：宇宙模式;
+  // hero模式,0：不显示；1：背景图模式；2：宇宙模式;3:博客模式;
   heroMode: 0,
   // 宇宙模式设置，限heroMode：2
   heroModeConfig: {
@@ -52,6 +52,85 @@ const configs = {
   // Hero 按钮跳转的 Link 链接,限heroMode：1
   heroButtonLink: "/posts/change-me",
   // Hero 按钮是否存在,1为存在，0为不存在,限heroMode：1
+  theme2Setting: {
+    // 右边栏作者头像
+    avatar: "https://placeimg.com/192/192/people",
+    // 头部 banner
+    topImg: "url(https://api.maho.cc/random-img/pc.php)",
+    // 右边作者栏作者名称
+    authorName: "Jetzihan",
+    // 是否显示文档链接
+    isDocLinks: 1,
+    // 下面的按钮是否使用中文
+    zhan: 1,
+    // 技术栈
+    techLinks: [
+      {
+        tech: "Vue",
+        styles: "bg-green-200 text-green-900",
+      },
+      {
+        tech: "React",
+        styles: "bg-blue-200 text-blue-900",
+      },
+      {
+        tech: "Python",
+        styles: "bg-yellow-200 text-yellow-900",
+      },
+    ],
+    // 个人格言
+    Words: "风筝有风，海豚有海。",
+    socialIcons: [
+      {
+        name: "GitHub",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-github-1.svg",
+        link: "https://github.com/inannan423",
+      },
+      {
+        name: "掘金",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-juejin-1.svg",
+        link: "https://juejin.cn",
+      },
+      {
+        name: "CSDN",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-csdn-1.svg",
+        link: "www.csdn.com",
+      },
+      {
+        name: "bilibili",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-bilibili-1.svg",
+        link: "https://bilibili.com",
+      },
+      {
+        name: "gitee",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-gitee-1.svg",
+        link: "www.gitee.com",
+      },
+      {
+        name: "weibo",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-wb-1.svg",
+        link: "www.weibo.com",
+      },
+      {
+        name: "Zhihu",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-zh-1.svg",
+        link: "www.weibo.com",
+      },
+      {
+        name: "抖音",
+        svgPath:
+          "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-dy-1.svg",
+        link: "www.weibo.com",
+      },
+    ],
+  },
   isHeroButton: 1,
   // 导航栏的选项
   navItems: [
@@ -63,6 +142,10 @@ const configs = {
       name: "Blog",
       to: "/posts",
     },
+    {
+      name: "Nav",
+      to: "/website",
+    },
     // ...可以继续添加
   ],
   // 导航栏上面的图标，建议使用 svg 格式，外链
@@ -70,7 +153,7 @@ const configs = {
   navIcons: [
     {
       name: "Github",
-      icon: "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/githubLogo.svg",
+      icon: "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-github-1.svg",
       to: "https://github.com/inannan423",
     },
     //... 可以继续添加
@@ -273,6 +356,13 @@ const configs = {
   docLinkText: "文档地址",
   // 文章底部附属链接地址，你可以填写你的Github仓库，也可以为你的公众号引流
   docLinkUrl: "https://github.com/inannan423/Daymd/tree/main/content/docs",
+  // 个人导航集合标题
+  navTitle: "导航分类",
+  // 是否显示 Banner 图片,1显示，0不显示
+  ifNavBanner: 1,
+  // 导航 Banner 图片链接
+  navBanner:
+    "url(https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/NavBanner.png)",
 };
 
 module.exports = configs;

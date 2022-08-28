@@ -42,7 +42,7 @@ import { allPosts, Post } from "../../.contentlayer/generated/index";
 import { generatePostsTree, TNode } from "../../utils/generate-posts-tree";
 import { titleToSlug } from "../../utils/title-to-slug";
 import { Locale } from "../../typings";
-let Path1 = "";
+
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: [
     ...generatePaths<PostMeta>(allPosts, Locale.EN),
