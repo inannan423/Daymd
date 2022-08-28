@@ -86,14 +86,16 @@ function Coding() {
 
 function StartButton() {
   return (
-    <div className="w-screen h-10 flex justify-center items-center">
-      <button className="startbtn">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span> Get Start
-      </button>
-    </div>
+    <Link href={"/docs"}>
+      <div className="w-screen h-10 flex justify-center items-center">
+        <button className="startbtn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span> Get Start
+        </button>
+      </div>
+    </Link>
   );
 }
 
@@ -140,7 +142,7 @@ export function CoolHead() {
       <Coding />
       <Codebox />
       <StartButton />
-      <div className="w-screen h-72 p-5 justify-center items-center">
+      <div className="w-screen h-84 p-5 justify-center items-center">
         <Poweredby />
       </div>
     </div>
