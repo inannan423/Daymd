@@ -11,9 +11,10 @@ const WebsiteCard = memo(({ website }: { website: Website }) => (
   >
     <img
       src={
-        typeof website.logo === "string"
-          ? website.logo
-          : (website.logo as any)?.src?.src
+        // typeof website.logo === "string"
+        //   ? website.logo
+        //   : (website.logo as any)?.src?.src
+        website.logo
       }
       alt={website.name}
       className="col-span-2  self-center w-16 h-16 rounded-full ring ring-primary ring-offset-1"
