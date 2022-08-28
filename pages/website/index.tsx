@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
-import WebsiteCard from "./_components/WebsiteCard";
+import WebsiteCard from "../../components/WebsiteCard";
 import ReactTooltip from "react-tooltip";
 import { websiteData } from "../../navData/website";
 import styles from "../../styles/website.module.css";
