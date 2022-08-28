@@ -4,7 +4,7 @@ import Link from "next/link";
 import WebsiteCard from "./_components/WebsiteCard";
 import ReactTooltip from "react-tooltip";
 import { websiteData } from "../../navData/website";
-import styles from "./website.module.css";
+import styles from "../../../../styles/websites.module.css";
 import { NavBar } from "../../components/NavBar";
 import configs from "../../daymd.config";
 import Parallax from "react-rellax";

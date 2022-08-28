@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import clsx from "clsx";
 import Link from "next/link";
-import styles from "./styles.module.css";
+import styles from "../../../../styles/styles.module.css";
 import { type Website } from "../../../../navData/website";
 
 const WebsiteCard = memo(({ website }: { website: Website }) => (
