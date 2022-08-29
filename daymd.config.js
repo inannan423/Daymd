@@ -3,7 +3,7 @@ const configs = {
   // 网站名称
   title: "Daymd.",
   // hero模式,0：不显示；1：背景图模式；2：宇宙模式;3:博客模式;
-  heroMode: 0,
+  heroMode: 3,
   // 宇宙模式设置，限heroMode：2
   heroModeConfig: {
     // 星星数量，number，要求：<1000
@@ -189,86 +189,74 @@ const configs = {
   FooterItems: [
     // 每一列
     {
-      label: "Blog",
+      label: "本站",
       // 列中的每一行
       items: [
         {
           key: 0,
           // 链接名称
-          name: "Hello",
+          name: "部署指南",
           // 链接地址
-          to: "/posts/change-me",
+          to: "/docs",
           blank: 0,
         },
         {
           key: 1,
-          name: "World",
-          to: "/",
-          blank: 1,
+          name: "博客",
+          to: "/posts",
+          blank: 0,
         },
         {
-          key: 2,
-          name: "Goods",
-          to: "/",
-          blank: 1,
+          key: 1,
+          name: "快速链接",
+          to: "/website",
+          blank: 0,
         },
         // ... 可继续添加
       ],
     },
     {
-      label: "TechStack",
+      label: "技术支持",
       items: [
         {
           key: 0,
           name: "React",
-          to: "/",
+          to: "https://react.docschina.org/",
           blank: 1,
         },
         {
           key: 1,
           name: "Next.js",
-          to: "/",
+          to: "https://nextjs.org/",
           blank: 1,
         },
         {
           key: 2,
           name: "Contentlayer",
-          to: "/",
+          to: "https://www.contentlayer.dev/",
           blank: 1,
         },
         {
           key: 3,
           name: "DaisyUI",
-          to: "/",
+          to: "https://daisyui.com/",
           blank: 1,
         },
         {
           key: 4,
           name: "Tailwind",
-          to: "/",
+          to: "https://tailwindcss.com/",
           blank: 1,
         },
       ],
     },
     {
-      label: "Links",
+      label: "链接",
       items: [
         {
           key: 0,
-          name: "Java",
-          to: "/",
-          blank: 1,
-        },
-        {
-          key: 1,
-          name: "Python",
-          to: "/",
-          blank: 1,
-        },
-        {
-          key: 2,
-          name: "JavaScript",
-          to: "/",
+          name: "Jetzihan",
+          to: "https://jetzihan.netlify.app",
           blank: 1,
         },
       ],

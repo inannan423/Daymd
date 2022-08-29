@@ -119,7 +119,7 @@ export default function DocsPage({ doc, tree, crumbs }) {
       <div style={{ display: configs.heroMode === 3 ? "" : "none" }}>
         <BlogListIndex tree={tree} />
       </div>
-      <CoolHead />
+      {/* <CoolHead /> */}
     </div>
   );
 }

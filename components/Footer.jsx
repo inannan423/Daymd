@@ -65,11 +65,22 @@ function Foot() {
               <img src={configs.footLogo} />
             </div>
           </div>
-          <p>
+          <div>
             <strong>{configs.footText}</strong>
             <br />
             {configs.footTextNormal}
-          </p>
+            <br />
+            <div className="font-mono">
+              Built with{" "}
+              <a
+                className="text-primary "
+                href="https://daymd.netlify.app"
+                target={"_blank"}
+              >
+                Daymd.
+              </a>{" "}
+            </div>
+          </div>
         </div>
 
         <div class="md:place-self-center md:justify-self-end">

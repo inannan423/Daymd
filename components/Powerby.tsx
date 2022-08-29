@@ -23,6 +23,7 @@ export const Poweredby: React.FC = () => (
           "ease-in-out",
           "hover:opacity-60"
         )}
+        target={"_blank"}
       >
         <img
           className="h-12 sm:h-20"
@@ -42,6 +43,7 @@ export const Poweredby: React.FC = () => (
           "ease-in-out",
           "hover:opacity-60"
         )}
+        target={"_blank"}
       >
         <img
           className="h-12 sm:h-20"
@@ -59,6 +61,7 @@ export const Poweredby: React.FC = () => (
           "ease-in-out",
           "hover:opacity-60"
         )}
+        target={"_blank"}
       >
         <img
           className="h-12 sm:h-20"
@@ -76,6 +79,7 @@ export const Poweredby: React.FC = () => (
           "ease-in-out",
           "hover:opacity-60"
         )}
+        target={"_blank"}
       >
         <img
           className="h-12 sm:h-20"
@@ -85,14 +89,15 @@ export const Poweredby: React.FC = () => (
     </div>
 
     <a
-      href="https://vercel.com"
+      href="https://netlify.app"
       className={cn(
-        "row-span-3 h-12 mt-3 flex items-center justify-center transition duration-1000 ease-in-out hover:opacity-60"
+        "row-span-3 h-24 mt-3 flex items-center justify-center transition duration-1000 ease-in-out hover:opacity-60"
       )}
+      target={"_blank"}
     >
       <img
-        className="h-12 sm:h-16"
-        src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/dployvercel.svg"
+        className="h-16 sm:h-24"
+        src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/netlifyicon.svg"
       />
     </a>
   </div>
