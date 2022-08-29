@@ -23,6 +23,7 @@ code>.line::before {
 
 
 div[data-rehype-pretty-code-fragment] pre {
+    max-width: 57rem;
     padding: 10px;
     background-color: rgba(25, 25, 25) !important;
     /* border-bottom-right-radius: 5px;
@@ -31,7 +32,7 @@ div[data-rehype-pretty-code-fragment] pre {
     margin-top: 5px;
     margin-bottom: 5px;
     overflow-x: hidden;
-    @apply overflow-x-hidden max-w-4xl;
+    @apply overflow-x-hidden;
 }
 
 div[data-rehype-pretty-code-fragment] .line {
