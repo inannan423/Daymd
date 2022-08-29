@@ -7,10 +7,10 @@ export const To: React.FC<{
   className?: string | "";
 }> = ({ children, className, to }) => {
   return (
-    <Link href={to}>
-      <button className={`btn btn-primary btn-xs ${className}`}>
+    <a href={to} style={{ textDecoration: "none" }} target={"_blank"}>
+      <button className={`btn  mx-1 btn-primary btn-sm ${className}`}>
         {children}
       </button>
-    </Link>
+    </a>
   );
 };

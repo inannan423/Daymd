@@ -75,6 +75,8 @@
 
 .markdown img {
   @apply rounded-xl;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 div[data-rehype-pretty-code-fragment] pre {

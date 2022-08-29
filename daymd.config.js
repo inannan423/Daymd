@@ -3,7 +3,7 @@ const configs = {
   // 网站名称
   title: "Daymd.",
   // hero模式,0：不显示；1：背景图模式；2：宇宙模式;3:博客模式;
-  heroMode: 3,
+  heroMode: 0,
   // 宇宙模式设置，限heroMode：2
   heroModeConfig: {
     // 星星数量，number，要求：<1000
