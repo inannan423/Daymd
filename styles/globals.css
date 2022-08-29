@@ -46,8 +46,9 @@
 }
 
 .markdown pre {
-  @apply overflow-x-auto;
+  @apply overflow-x-hidden;
 }
+
 .markdown .Text-Limit {
   overflow: hidden;
   text-overflow: ellipsis;

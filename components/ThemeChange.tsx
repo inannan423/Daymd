@@ -219,8 +219,3 @@ export const ThemeChange: React.FC<{
     </div>
   );
 };
-
-// <div class="btn-group">
-//   <button class="btn btn-outline btn-primary btn-sm  w-16">Button</button>
-//   <button class="btn btn-outline btn-primary btn-sm w-16">Button</button>
-// </div>;

@@ -31,7 +31,7 @@ div[data-rehype-pretty-code-fragment] pre {
     margin-top: 5px;
     margin-bottom: 5px;
     overflow-x: hidden;
-    @apply overflow-x-auto;
+    @apply overflow-x-hidden max-w-4xl;
 }
 
 div[data-rehype-pretty-code-fragment] .line {

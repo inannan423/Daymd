@@ -29,21 +29,6 @@ type AsidesProps<T> = {
   visible: boolean;
 } & T;
 
-const variants = {
-  visible: {
-    width: "100%",
-    transition: {
-      duration: 1,
-    },
-  },
-  hidden: {
-    width: 0,
-    transition: {
-      duration: 1,
-    },
-  },
-};
-
 export const HeadingsAside: React.FC<
   AsidesProps<{
     headings: PostHeading[];
