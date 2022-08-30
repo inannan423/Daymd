@@ -3,7 +3,7 @@ const configs = {
   // 网站名称
   title: "Daymd.",
   // hero模式,0：不显示；1：背景图模式；2：宇宙模式;3:博客模式;
-  heroMode: 0,
+  heroMode: 3,
   // 宇宙模式设置，限heroMode：2
   heroModeConfig: {
     // 星星数量，number，要求：<1000
@@ -37,13 +37,15 @@ const configs = {
   navTheme: 2,
   // 导航栏logo是否显示,0为不显示，1为显示
   isNavLogo: 1,
+  // 博客创建时间，string，格式：YYYY-MM-DD
+  buildTime: "2020-08-31",
   // 导航栏logo图片链接
   navLogo:
     "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/daymd_logo1.svg",
   // 导航栏透明度，bg-opacity-请不要修改，后面的数字越大越不透明，值为每10增加，范围0~100
   // 例如56、45等非整十的值无效
   // bg-opacity-xx后面可以添加其他 Tailwind 样式类
-  navOpacity: "bg-opacity-60",
+  navOpacity: "bg-opacity-10",
   // Hero的背景图片,限heroMode：1,使用 https://api.maho.cc/random-img/pc.php 接口可以每刷新一次得到不同的二次元背景，详见文档
   heroBg:
     "url(https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/BK@1.5x.png)",
@@ -51,11 +53,13 @@ const configs = {
   heroButton: "Get Start",
   // Hero 按钮跳转的 Link 链接,限heroMode：1
   heroButtonLink: "/posts/change-me",
-  // Hero 按钮是否存在,1为存在，0为不存在,限heroMode：1
+  // 主页设置，限heroMode：3
   theme2Setting: {
     // 右边栏作者头像
     avatar: "https://placeimg.com/192/192/people",
-    // 头部 banner
+    // 背景图大小，1为顶部小图，2为整页图,3为混合模式
+    backSize: 3,
+    // 背景图链接，url不可省略
     topImg: "url(https://api.maho.cc/random-img/pc.php)",
     // 右边作者栏作者名称
     authorName: "Jetzihan",
@@ -313,6 +317,9 @@ const configs = {
     Note: "笔记",
     Example: "举例",
   },
+  // doc和post的背景图片，默认为空，即不显示
+  // docPostBgImg: "url(https://api.maho.cc/random-img/pc.php)",
+  docPostBgImg: "url(https://api.maho.cc/random-img/pc.php)",
   // 博客页面的标题
   postPageTitle: "我的博客",
   // 小屏幕时菜单名称

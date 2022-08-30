@@ -57,3 +57,40 @@ heroMode: 3,
 ![4](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/herobg.gif)
 
 接下来就不再提供动图展示了，比较占用流量。  
+
+## heroModeConfig
+
+heroMode:2时的配置表，只有在 heroMode 是 `2` 的时候才生效。  
+
+```js
+heroModeConfig: {
+    // 星星数量，number，要求：<1000
+    starsCount: 250,
+    // 星星颜色,string
+    starsColor: '#ffffff',
+    // 星星旋转速度,number
+    starsRotationSpeed: 3,
+    // 彗星出现的频度，number，若值设置为0，隐藏彗星
+    cometFrequence: 2,
+    // 星云强度，number，即两侧颜色深度
+    nebulasIntensity: 0,
+    // 太阳系数量，number，若设置为0，隐藏
+    sunScale: 1,
+    // 行星数量，number，若设置为0，隐藏
+    planetsScale: 1,
+    // 太阳系轨道，number，要求<100
+    solarSystemOrbite: 65,
+    // 轨道速度，number
+    solarSystemSpeedOrbit: 100,
+},
+```
+
+## heroText
+
+**首页的文字**。接受值类型为 `string`，只接受一个参数值。  
+
+> 关联配置：heroMode，只在 heroMode 为 `1` `2` 时生效。
+
+```js
+heroText: 'Do it all with API.',
+```

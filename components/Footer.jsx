@@ -27,7 +27,7 @@ function Foot() {
         style={{
           display: configs.ifFootItems ? "" : "none",
         }}
-        class="footer p-10 bg-base-200 text-base-content"
+        class="z-50 footer p-10 bg-base-200 text-base-content"
       >
         {configs.FooterItems.map((props, idx) => (
           <div key={idx} {...props}>

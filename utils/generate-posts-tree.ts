@@ -5,6 +5,7 @@ import configs from "../daymd.config";
 export type TNode = {
   title: string;
   desc: string;
+  date: string;
   backpic?: string;
   route: string;
   children: Array<TNode>;
@@ -32,6 +33,7 @@ export function generatePostsTree(
     .map<TNode>((doc) => ({
       title: doc.title,
       desc: doc.excerpt,
+      date: doc.date,
       backpic: doc.backpic,
       route: "/posts/" + doc.meta.map((m: PostMeta) => m.slug).join("/"),
       children: generatePostsTree(
@@ -46,6 +48,7 @@ export function generatePostsTree(
         title: configs.postPageTitle,
         route: "/posts",
         desc: "",
+        date: configs.buildTime,
         backpic: "",
         children: [],
       },

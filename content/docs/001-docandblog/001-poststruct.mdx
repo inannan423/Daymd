@@ -73,9 +73,13 @@ backpic: null # 博客列表背景图片
 title: 博客标题
 excerpt: 博客的描述
 date: 2022-08-29 # 博客创建时间 
-backpic: https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/NavBanner.png # 博客列表背景图片
+backpic: url(https://api.maho.cc/random-img/pc.php) # 博客列表背景图片
 ---
 ```
+
+<Warn>
+请注意，背景图片的格式为 `backpic:url(链接)`，而不是 `backpic:链接`。`url` 以及后面的括号是必须的。否则不会生效。
+</Warn>
 
 ### 例子
 

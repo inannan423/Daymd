@@ -140,6 +140,18 @@ export default function DocsPage({
   return (
     <div className="flex flex-col">
       {/* <div className={cn("h-32")}></div> */}
+      <div
+        className="-z-10 fixed bg-opacity-10 w-screen h-full flex justify-center items-center"
+        style={{
+          backgroundImage: configs.docPostBgImg,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* 添加透明遮罩 */}
+        <div className="bg-base-100 bg-opacity-70 w-screen h-full flex justify-center items-center" />
+        {/* <div></div> */}
+      </div>
       <div style={{ zIndex: "1000" }} className="z-50 ">
         <NavBar />
       </div>

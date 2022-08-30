@@ -90,6 +90,24 @@ function BlogBack() {
     </div>
   );
 }
+
+function BlogBackMax() {
+  return (
+    <div
+      className="-z-10 fixed bg-opacity-10 w-screen h-full flex justify-center items-center"
+      style={{
+        backgroundImage: configs.theme2Setting.topImg,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* 添加透明遮罩 */}
+      <div className="bg-base-100 bg-opacity-70 w-screen h-full flex justify-center items-center" />
+      {/* <div></div> */}
+    </div>
+  );
+}
+
 export default function BlogListItem({
   doc,
   tree,
@@ -98,7 +116,7 @@ export default function BlogListItem({
   return (
     <div className="my-2">
       <div
-        style={{ backgroundImage: "url(https://placeimg.com/400/225/arch)" }}
+        style={{ backgroundImage: doc.backpic }}
         className="bg-no-repeat bg-cover card h-42 w-full bg-base-100 shadow-xl image-full"
       >
         <div className="card-body">
@@ -110,9 +128,28 @@ export default function BlogListItem({
   );
 }
 
+function isBlogMax() {
+  if (configs.theme2Setting.backSize === 1) {
+    return <BlogBack />;
+  } else if (configs.theme2Setting.backSize === 2) {
+    return <BlogBackMax />;
+  } else if (configs.theme2Setting.backSize === 3) {
+    return (
+      <>
+        <BlogBack />
+        <BlogBackMax />
+      </>
+    );
+  }
+}
+
 export const BlogListIndex: React.FC<{ tree: TNode[] }> = ({ tree }) => (
   <div className="flex flex-col">
-    <BlogBack />
+    {isBlogMax()}
+    <div
+      style={{ display: configs.theme2Setting.backSize === 2 ? "" : "none" }}
+      className="mt-40 -z-20"
+    ></div>
     <div className="mx-10 w-screen px-20 my-5 grid gap-4 grid-cols-6 grid-flow-col auto-cols-3">
       <div className="col-span-4">
         <PostIndexBar tree={tree} />

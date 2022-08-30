@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Parallax from "react-rellax";
 import { motion, Variants } from "framer-motion";
-
+import moment from "moment";
 import { FaChevronRight } from "react-icons/fa";
 import { TNode } from "../../utils/generate-posts-tree";
 import { useMount } from "react-use";
@@ -74,6 +74,7 @@ const TNodes: React.FC<TreeNodeProps> = ({ node, level }) => {
       <TreeNodeLink
         desc={node.desc}
         title={node.title}
+        date={node.date}
         backpic={node.backpic}
         route={node.route}
         level={level}
@@ -103,8 +104,9 @@ const TNodes: React.FC<TreeNodeProps> = ({ node, level }) => {
 
 interface TreeNodeLinkProps {
   desc: string;
+  date: string;
   title: string;
-  backpic: string;
+  backpic?: string;
   route: string;
   level: number;
   activeRoute: string;
@@ -116,6 +118,7 @@ interface TreeNodeLinkProps {
 const TreeNodeLink: React.FC<TreeNodeLinkProps> = ({
   title,
   desc,
+  date,
   route,
   backpic,
   level,
@@ -131,8 +134,11 @@ const TreeNodeLink: React.FC<TreeNodeLinkProps> = ({
         className="hover:opacity-80 transition-all duration-1000 ease-in-out bg-no-repeat bg-cover card h-42  bg-base-100 shadow-xl image-full"
       >
         <div className="card-body w-full">
-          <h2 className="card-title">{title}</h2>
-          <p>{desc}</p>
+          <h2 className="card-title font-bold text-2xl">{title}</h2>
+          <p className="text-sm font-mono">
+            {moment(date).format("YYYY-MM-DD")}
+          </p>
+          <p className="text-base">{desc}</p>
         </div>
       </div>
     </div>
