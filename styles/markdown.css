@@ -23,7 +23,7 @@ code>.line::before {
 
 
 div[data-rehype-pretty-code-fragment] pre {
-    max-width: 57rem;
+    max-width: 59rem;
     padding: 10px;
     background-color: rgba(25, 25, 25) !important;
     /* border-bottom-right-radius: 5px;
