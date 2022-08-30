@@ -1,0 +1,59 @@
+---
+title: 自定义 API
+excerpt: 自定义 API
+date: 2022-08-30
+---
+
+在这一章节，将带你了解 `daymd.config.js` 文件中暴露出的接口及其作用。`daymd.config.js` 是全局配置文件，它能帮你自定义网站中的一些功能和样式。  
+
+## title
+
+网站标题。接受值类型为 `string`，只接受一个参数值。
+
+示例值：  
+
+```js
+title: 'Daymd',
+title: '我的博客',
+title: '小山羊的博客',
+title: 'XX大学计算机协会',
+...
+```
+
+它将产生如下效果：  
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/res.gif)
+
+## heroMode
+
+**首页的展示形式**。接受值类型为 `number`，只接受一个参数值。除开不展示首页外，Daymd 为您提供了三种首页展示形式。  
+
+### heroMode:1
+
+```js
+heroMode: 1,
+```
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830180948.png)
+
+### heroMode:2
+
+```js
+heroMode: 2,
+```
+
+![2](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830181043.png)
+
+### heroMode:3
+
+```js
+heroMode: 3,
+```
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830185733.png)
+
+动图效果展示：  
+
+![4](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/herobg.gif)
+
+接下来就不再提供动图展示了，比较占用流量。  

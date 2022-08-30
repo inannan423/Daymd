@@ -27,7 +27,7 @@
 }
 
 .markdown h2 {
-  @apply pl-3 text-2xl border-l-8 border-primary;
+  @apply pl-3 text-2xl border-l-8 border-primary  my-6 w-full;
 }
 
 .markdown h3 {

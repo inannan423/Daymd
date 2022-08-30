@@ -297,3 +297,12 @@ input:hover {
   width: 1rem;
   height: 1rem;
 }
+
+.my-btn-style {
+  background-color: #dd68edee !important;
+  box-shadow: none !important;
+  border: 2px soild #d43111 !important;
+  transition: all 2s ease-in-out !important;
+  height: 100px !important;
+  margin-bottom: 10px;
+}

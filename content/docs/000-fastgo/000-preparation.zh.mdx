@@ -26,13 +26,61 @@ date: 2022-08-29
 
 这时，你就可以在你的 GitHub 仓库中拥有一个 Daymd 副本。  
 
+## Stackblitz
+
+![2](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830113728.png)
+
+### 介绍
+
+Stackblitz 是一个在线的代码编辑器，主要聚焦于创建 Web 应用项目。它的最大优点是在浏览器中就可以完成一个完整 Web 应用的构建。它让 `Node.js` 可以在浏览器中运行，这也就帮助我们免去了 Node.js 安装和部署、NPM 安装部署工作。如果你未接触过此类 Web 开发流程，那就跟着这一章节，在浏览器中借助在线 IDE **Stackblitz** 开始一个 Daymd 项目（也就是一个 Next.js 项目）。
+
+### 项目导入
+
+打开 <To to="https://stackblitz.com/"> Stackblitz 官网 </To> 按照提示，点击创建一个 Next.js 的工程：  
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830113959.png)
+
+接着，进入工程界面，点击 `Connect repository`:  
+
+![2](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/1661830846961.png)
+
+点击 `import an existing repository` ，导入一个已存在的仓库：  
+
+![2](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/1661830921807.png)
+
+接着，到你刚刚 **Fork** 好的仓库（注意是你自己的仓库，名称应该是 `yourgithubid/Daymd` ） 而不是 `inannan423/Daymd` 。复制浏览器地址栏的链接：  
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/1661748964159.png)
+
+粘贴到 Stackblitz 导入界面。  
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830114408.png)
+
+点击按钮 `import repository` 导入。导入完成后显示如下：  
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830114537.png)
+
+### 项目运行
+
+这时，需要你重新刷新浏览器。等待重新安装完成。如果依旧如此，请尝试多次刷新。成功之后右边会展示新的预览。  
+
+点击右上角，`open in new tab`。  
+
+![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/1661832062176.png)
+
+就可以开始在线编写个人网站啦！
+
+<Tips>
+下面将介绍 Codesandbox ，实际上它和 Stackblitz 类似，你只需要选择一个使用即可，之后会使用 Stackblitz 演示。
+</Tips>
+
 ## Codesandbox
 
 ![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220829102247.png)
 
 ### 介绍
 
-CodeSandbox 是一个在线的代码编辑器，主要聚焦于创建 Web 应用项目。它的最大优点是在浏览器中就可以完成一个完整 Web 应用的构建。它让 `Node.js` 可以在浏览器中运行，这也就帮助我们免去了 Node.js 安装和部署、NPM 安装部署工作。如果你未接触过此类 Web 开发流程，那就跟着这一章节，在浏览器中借助在线 IDE **Codesandbox** 开始一个 Daymd 项目（也就是一个 Next.js 项目）。
+同 Stackblitz 一样，CodeSandbox 也是一个在线的代码编辑器，主要聚焦于创建 Web 应用项目。它的最大优点是在浏览器中就可以完成一个完整 Web 应用的构建。它让 `Node.js` 可以在浏览器中运行，这也就帮助我们免去了 Node.js 安装和部署、NPM 安装部署工作。如果你未接触过此类 Web 开发流程，那就跟着这一章节，在浏览器中借助在线 IDE **Codesandbox** 开始一个 Daymd 项目（也就是一个 Next.js 项目）。
 
 ### 项目导入
 
@@ -87,5 +135,3 @@ npm install
 ```bash title="cmd"
 npm run dev
 ```
-
-怎么样？通过上面的尝试，是不是觉得你已经可以开始驾驭 Daymd 了！并没有写任何代码！！（Markdown文档内容不算代码）。
