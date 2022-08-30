@@ -147,7 +147,7 @@ export default function DocsPage({
         }}
       >
         {/* 添加透明遮罩 */}
-        <div className="bg-base-100 bg-opacity-70 w-screen h-full flex justify-center items-center" />
+        <div className="bg-base-100 bg-opacity-90 w-screen h-full flex justify-center items-center" />
         {/* <div></div> */}
       </div>
       <div style={{ zIndex: "1000" }} className="z-50 ">

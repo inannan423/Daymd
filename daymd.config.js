@@ -47,8 +47,7 @@ const configs = {
   // bg-opacity-xx后面可以添加其他 Tailwind 样式类
   navOpacity: "bg-opacity-10",
   // Hero的背景图片,限heroMode：1,使用 https://api.maho.cc/random-img/pc.php 接口可以每刷新一次得到不同的二次元背景，详见文档
-  heroBg:
-    "url(https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/BK@1.5x.png)",
+  heroBg: "url(https://api.maho.cc/random-img/pc.php)",
   // Hero 按钮上的文字,限heroMode：1
   heroButton: "Get Start",
   // Hero 按钮跳转的 Link 链接,限heroMode：1
@@ -56,9 +55,10 @@ const configs = {
   // 主页设置，限heroMode：3
   theme2Setting: {
     // 右边栏作者头像
-    avatar: "https://placeimg.com/192/192/people",
+    avatar:
+      "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220710133634.png",
     // 背景图大小，1为顶部小图，2为整页图,3为混合模式
-    backSize: 3,
+    backSize: 2,
     // 背景图链接，url不可省略
     topImg: "url(https://api.maho.cc/random-img/pc.php)",
     // 右边作者栏作者名称

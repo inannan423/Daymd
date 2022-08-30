@@ -131,7 +131,7 @@ const TreeNodeLink: React.FC<TreeNodeLinkProps> = ({
     <div className="w-full cursor-pointer my-2">
       <div
         style={{ backgroundImage: backpic }}
-        className="hover:opacity-80 transition-all duration-1000 ease-in-out bg-no-repeat bg-cover card h-42  bg-base-100 shadow-xl image-full"
+        className="bg-base-100 hover:opacity-80 transition-all duration-1000 ease-in-out bg-no-repeat bg-cover card h-42   shadow-xl image-full"
       >
         <div className="card-body w-full">
           <h2 className="card-title font-bold text-2xl">{title}</h2>

@@ -150,11 +150,11 @@ export const BlogListIndex: React.FC<{ tree: TNode[] }> = ({ tree }) => (
       style={{ display: configs.theme2Setting.backSize === 2 ? "" : "none" }}
       className="mt-40 -z-20"
     ></div>
-    <div className="mx-10 w-screen px-20 my-5 grid gap-4 grid-cols-6 grid-flow-col auto-cols-3">
-      <div className="col-span-4">
+    <div className="w-screen px-10 my-1 grid gap-4 grid-cols-6 grid-flow-col auto-cols-3">
+      <div className="mx-10  md:col-span-4 w-full col-span-6">
         <PostIndexBar tree={tree} />
       </div>
-      <div className="sticky">
+      <div className="mx-10 sticky">
         <RightAuthor />
       </div>
     </div>
