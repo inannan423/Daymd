@@ -3,7 +3,7 @@ const configs = {
   // 网站名称
   title: "Daymd.",
   // hero模式,0：不显示；1：背景图模式；2：宇宙模式;3:博客模式;
-  heroMode: 3,
+  heroMode: 0,
   // 宇宙模式设置，限heroMode：2
   heroModeConfig: {
     // 星星数量，number，要求：<1000
@@ -63,8 +63,6 @@ const configs = {
     topImg: "url(https://api.maho.cc/random-img/pc.php)",
     // 右边作者栏作者名称
     authorName: "Jetzihan",
-    // 是否显示文档链接
-    isDocLinks: 1,
     // 下面的按钮是否使用中文
     zhan: 1,
     // 技术栈
@@ -319,7 +317,7 @@ const configs = {
   },
   // doc和post的背景图片，默认为空，即不显示
   // docPostBgImg: "url(https://api.maho.cc/random-img/pc.php)",
-  docPostBgImg: "url(https://api.maho.cc/random-img/pc.php)",
+  docPostBgImg: "url()",
   // 博客页面的标题
   postPageTitle: "我的博客",
   // 小屏幕时菜单名称
