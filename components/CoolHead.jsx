@@ -111,12 +111,12 @@ function Codebox() {
       </div>
       <div className=" flex items-center justify-center">
         <iframe
-          src="https://codesandbox.io/embed/loving-snowflake-l2gcdv?fontsize=14&hidenavigation=1&module=%2Fdaymd.config.js&previewwindow=tests&theme=dark"
+          src="https://stackblitz.com/edit/nextjs-umjbfv?embed=1&file=daymd.config.js&theme=dark"
           style={{
             width: "100%",
-            height: "500px",
+            height: "600px",
             border: "0",
-            borderRadius: "4px",
+            borderRadius: "8px",
             overflow: "hidden",
           }}
           className="shadow-lg w-9/12 ml-20 mr-20 mb-20 rounded-2xl"
