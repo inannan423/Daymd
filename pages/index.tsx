@@ -109,6 +109,7 @@ export const getStaticProps: GetStaticProps<
 };
 
 export default function DocsPage({ doc, tree, crumbs }) {
+  console.log("🎉Built with daymd:https://daymd.netlify.app");
   return (
     <div className="md:box-content mx-auto">
       <div className="fixed z-50">

@@ -189,7 +189,7 @@ export default function DocsPage({
           </main>
         </article>
         <div
-          className="w-64  hidden xl:flex"
+          className="w-64 sticky  hidden xl:flex"
           style={{ display: configs.ifPostRightBar ? "" : "none" }}
         >
           <Aside>

@@ -75,7 +75,9 @@ function Coding() {
               就像手机设置一样，对不同的选项进行设置，就能达到你想要的结果。
             </p>
             <div class="card-actions justify-end">
-              <button class="btn">查看 API</button>
+              <Link href="/docs/api">
+                <button class="btn">查看 API</button>
+              </Link>
             </div>
           </div>
         </div>

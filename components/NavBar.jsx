@@ -10,7 +10,7 @@ function Nav() {
     >
       <div class="navbar-start">
         <div style={{ zIndex: "1000" }} class="dropdown">
-          <label tabindex="0" class="btn btn-ghost btn-circle">
+          <label tabIndex="0" class="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
@@ -19,15 +19,15 @@ function Nav() {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h7"
               />
             </svg>
           </label>
           <ul
-            tabindex="0"
+            tabIndex="0"
             class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {configs.navItems.map((props, idx) => (
@@ -76,7 +76,7 @@ function Nav2() {
     >
       <div class="navbar-start">
         <div class="dropdown">
-          <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <label tabIndex="0" class="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
@@ -85,15 +85,15 @@ function Nav2() {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
           </label>
           <ul
-            tabindex="0"
+            tabIndex="0"
             class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 bg-opacity-100 rounded-box w-52"
           >
             {configs.navItems.map((props, idx) => (

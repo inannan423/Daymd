@@ -109,17 +109,17 @@ body {
 .circle1 {
   left: 13rem;
   top: -26.44rem;
-  width: 60rem;
-  height: 60rem;
+  width: 70rem;
+  height: 70rem;
   background: linear-gradient(
     90deg,
-    rgba(150, 255, 244, 0.813) 0%,
-    rgba(0, 71, 252, 0.806) 100%
+    rgba(0, 71, 252, 0.806) 0%,
+    rgba(2, 41, 138, 0.806) 100%
   );
   border-radius: 50%;
   opacity: 0.2;
   position: fixed;
-  filter: blur(120px);
+  filter: blur(180px);
   z-index: -1;
 }
 
