@@ -111,7 +111,7 @@ function Codebox() {
       </div>
       <div className=" flex items-center justify-center">
         <iframe
-          src="https://stackblitz.com/edit/nextjs-umjbfv?embed=1&file=daymd.config.js&theme=dark"
+          src="https://stackblitz.com/edit/nextjs-pwpp3i?embed=1&file=daymd.config.js&theme=dark"
           style={{
             width: "100%",
             height: "600px",
