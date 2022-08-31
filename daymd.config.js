@@ -320,8 +320,6 @@ const configs = {
   docPostBgImg: "url()",
   // 博客页面的标题
   postPageTitle: "我的博客",
-  // 小屏幕时菜单名称
-  smListName: "目录",
   // Markdown中代码块主题样式
   /**
    * 可用主题：

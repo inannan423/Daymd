@@ -1,24 +1,22 @@
 // import { shuffle } from '../utils/jsUtils'
 
 export type Friend = {
-  title: string
-  description?: string
-  website: string
-  avatar?: any
-}
+  title: string;
+  description?: string;
+  website: string;
+  avatar?: any;
+};
 
 export const Friends: Friend[] = [
   {
-    title: '北林计协',
-    description: '北京林业大学计算机与网络协会',
-    website: 'https://bljx2022project.github.io/bljx_blog/',
-    avatar: 'https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/bljx.png',
+    title: "Jetzihan",
+    description: "Daymd 作者的个人网站",
+    website: "https://jetzihan.netlify.app/",
+    avatar: "https://avatars.githubusercontent.com/u/83146544?v=4",
   },
-]
+];
 
 export function sortFriend() {
-  let result = Friends
-
-  // shuffle(result)
-  return result
+  let result = Friends;
+  return result;
 }

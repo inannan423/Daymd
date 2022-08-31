@@ -44,14 +44,14 @@ export const HeadingsAside: React.FC<
     <div
       style={{ position: "sticky", top: "0" }}
       className={cn(
-        "h-min  mt-10 space-y-4 px-6 py-4 w-64  border-l-2 border-opacity-25 border-blue-100"
+        " h-min  mt-10 space-y-4 px-6 py-4 w-64  border-l-2 border-opacity-25 border-blue-100"
       )}
     >
       <h3 className={cn(" uppercase font-bold text-content")}>
         {configs.rightContentText}
       </h3>
-      <nav className={cn("grow")}>
-        <ul className={cn("space-y-1.5")}>
+      <nav className={cn("grow h-screen overflow-y-scroll overscroll-auto")}>
+        <ul className={cn("space-y-1.5 ")}>
           {headings.length &&
             [...headings]
               .filter((h) => h.level > 1)
