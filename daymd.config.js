@@ -1,9 +1,9 @@
 // 全局API接口
 const configs = {
   // 网站名称
-  title: "Daymd.",
+  title: "北依树洞",
   // hero模式,0：不显示；1：背景图模式；2：宇宙模式;3:博客模式;
-  heroMode: 3,
+  heroMode: 1,
   // 宇宙模式设置，限heroMode：2
   heroModeConfig: {
     // 星星数量，number，要求：<1000
@@ -26,19 +26,18 @@ const configs = {
     solarSystemSpeedOrbit: 100,
   },
   // 大文字,限heroMode：1|2
-  heroText: "Do it all with API.",
+  heroText: "心灵的些许输出",
   // 大文字下的说明文字,限heroMode：1
-  heroContent:
-    "A blog site builder built with Next.js, Tailwind, DaisyUI, Contentlayer. Almost everything can be configured via the API interface. Get started quickly with zero basics.",
+  heroContent: "by HanaHoshikawa",
   // 标签图标
   favicon:
     "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/daymd_logo1.svg",
   // NavBar 的样式，参数值 1、2
   navTheme: 2,
   // 导航栏logo是否显示,0为不显示，1为显示
-  isNavLogo: 1,
+  isNavLogo: 0,
   // 博客创建时间，string，格式：YYYY-MM-DD
-  buildTime: "2020-08-31",
+  buildTime: "2022-10-22",
   // 导航栏logo图片链接
   navLogo:
     "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/daymd_logo1.svg",
@@ -49,7 +48,7 @@ const configs = {
   // Hero的背景图片,限heroMode：1,使用 https://api.maho.cc/random-img/pc.php 接口可以每刷新一次得到不同的二次元背景，详见文档
   heroBg: "url(https://api.maho.cc/random-img/pc.php)",
   // Hero 按钮上的文字,限heroMode：1
-  heroButton: "Get Start",
+  heroButton: "Welcome",
   // Hero 按钮跳转的 Link 链接,限heroMode：1
   heroButtonLink: "/posts/change-me",
   // 主页设置，限heroMode：3
@@ -154,9 +153,9 @@ const configs = {
   // Todo
   navIcons: [
     {
-      name: "Github",
-      icon: "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-github-1.svg",
-      to: "https://github.com/inannan423",
+      name: "Bilibili",
+      icon: "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/icon-bilibili-1.svg",
+      to: "https://space.bilibili.com/287749826?spm_id_from=333.1007.0.0",
     },
     //... 可以继续添加
   ],
@@ -197,7 +196,7 @@ const configs = {
         {
           key: 0,
           // 链接名称
-          name: "部署指南",
+          name: "文档",
           // 链接地址
           to: "/docs",
           blank: 0,
@@ -273,22 +272,12 @@ const configs = {
   // Logo下的加粗文字
   footText: "Daymd by Jetzihan.",
   // 加粗文字下的文字
-  footTextNormal: "Made with ❤ by Chengzihan.",
+  footTextNormal: "Made by HanaHoshikawa.",
   socialIcon: [
     {
       name: "bilibili",
       icon: "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/bzhan.svg",
-      to: "https://bilibili.com",
-    },
-    {
-      name: "CSDN",
-      icon: "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/csdn.svg",
-      to: "https://csdn.com",
-    },
-    {
-      name: "稀土掘金",
-      icon: "https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/xitujuejin.svg",
-      to: "https://juejin.cn/",
+      to: "https://space.bilibili.com/287749826?spm_id_from=333.1007.0.0",
     },
   ],
   // 是否启用回到顶部按钮:1是，0否
