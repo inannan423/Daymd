@@ -48,7 +48,7 @@ const configs = {
   // Hero的背景图片,限heroMode：1,使用 https://api.maho.cc/random-img/pc.php 接口可以每刷新一次得到不同的二次元背景，详见文档
   heroBg: "url(https://api.maho.cc/random-img/pc.php)",
   // Hero 按钮上的文字,限heroMode：1
-  heroButton: "Welcome",
+  heroButton: "Welcome！",
   // Hero 按钮跳转的 Link 链接,限heroMode：1
   heroButtonLink: "/posts/change-me",
   // 主页设置，限heroMode：3
