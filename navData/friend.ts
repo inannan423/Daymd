@@ -1,5 +1,3 @@
-// import { shuffle } from '../utils/jsUtils'
-
 export type Friend = {
   title: string;
   description?: string;

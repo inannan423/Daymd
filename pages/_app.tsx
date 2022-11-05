@@ -10,7 +10,6 @@ import { CoolHead } from "../components/CoolHead";
 import ScrollToTop from "react-scroll-to-top";
 import configs from "../daymd.config";
 
-// This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   return (
     <>

@@ -70,7 +70,6 @@ export default defineDocumentType(() => ({
           // remove locale suffix
           .split(".")[0]
           .split("/")
-          // skip 'Posts' prefix
           .slice(1)
           // skip 'index' with locale suffix
           .filter((name: string) => name.match(/^index$/) === null)

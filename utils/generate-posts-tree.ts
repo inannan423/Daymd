@@ -27,7 +27,7 @@ export function generatePostsTree(
           .join("/")
           .startsWith(parentSlugs.join("/"))
     )
-    // sort by order
+    // sort by order.
     .sort((a, b) => a.meta[level].order - b.meta[level].order)
     // generate tree
     .map<TNode>((doc) => ({

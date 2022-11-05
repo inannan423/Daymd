@@ -6,7 +6,7 @@ import { CONTENT_DIR } from "./src/configs/constants";
 import DocType from "./src/contentlayer/types/doc";
 import PostType from "./src/contentlayer/types/post";
 
-// 代码高亮
+// 代码高亮.
 const options = {
   theme: configs.mdCodeTheme,
   onVisitLine(node) {

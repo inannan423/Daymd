@@ -9,7 +9,6 @@ import { titleToSlug } from "../utils/title-to-slug";
 import Parallax from "react-rellax";
 import { Locale } from "../typings";
 import configs from "../daymd.config";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type {
   GetStaticPaths,
   GetStaticProps,

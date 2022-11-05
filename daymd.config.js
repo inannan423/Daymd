@@ -1,4 +1,4 @@
-// 全局API接口
+// 全局API接口，设置
 const configs = {
   // 网站名称
   title: "Daymd.",

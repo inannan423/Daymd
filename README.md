@@ -7,7 +7,7 @@
 - 在浏览器完成全部工作，不需要本地环境
 - 灵活开放
 
-[零基础超详细文档](https://daymd.netlify.app)  
+[详细文档](https://daymd.netlify.app)  
 
 ## 预览
 
