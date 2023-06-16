@@ -11,11 +11,10 @@
 
 ## 预览
 
-![1](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830215225.png)  
+![image](https://github.com/inannan423/Daymd/assets/83146544/89b1563b-e9b1-4b22-91c2-5813f080b771)
+![image](https://github.com/inannan423/Daymd/assets/83146544/b4464713-a030-4f9d-b97c-893f2ab4c36a)
+![image](https://github.com/inannan423/Daymd/assets/83146544/0a1e08c7-244a-41cf-9d4f-2f1fcbe1c1da)
 
-![2](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830215418.png)
-
-![3](https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20220830150125.png)
 
 ## 本地运行
 
